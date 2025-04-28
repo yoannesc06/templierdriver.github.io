@@ -1,0 +1,4 @@
+git status            # voir ce qui a changé
+git add .             # ajouter toutes les modifs
+git commit -m "28/04"
+git push              # pousser sur GitHub
