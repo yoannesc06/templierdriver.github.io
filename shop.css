@@ -1,0 +1,206 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #fff;
+  color: #000;
+}
+/* HEADER */
+header {
+  background: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon img {
+  vertical-align: middle;
+}
+
+.cart-icon {
+  margin-left: 0, 5rem;
+  cursor: pointer;
+}
+/* PRODUITS */
+.shop-section {
+  margin-top: 10rem;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.products-container {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  max-width: 350px;
+}
+
+.product-image {
+  position: relative;
+  width: 320px;
+  height: 380px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product-image .back {
+  opacity: 0;
+}
+
+.product-card:hover .back {
+  opacity: 1;
+}
+
+.product-card:hover .front {
+  opacity: 0;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.price {
+  margin: 8px 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 8px;
+}
+/* FOOTER */
+.footer-separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+}
+
+footer {
+  background-color: white;
+  padding: 40px 60px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #111;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo,
+.footer-contact,
+.footer-news {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo p:first-child {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-logo .social-icons a {
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.footer-contact p,
+.footer-news p {
+  margin: 6px 0;
+}
+
+.footer-news input[type="email"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.footer-news .newsletter-form {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.footer-news button {
+  padding: 6px 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #555;
+}

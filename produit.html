@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produit - Templier Driver</title>
+    <link rel="stylesheet" href="produit.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/LOGO.png" alt="Templier Driver Logo" />
+        </a>
+        <nav>
+          <a href="panier.html" class="cart-icon">
+            <img src="images/panier.png" alt="Panier" width="24" />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- PRODUIT -->
+    <main class="product-page">
+      <div class="product-main">
+        <div class="product-gallery">
+          <div class="product-images">
+            <img id="product-front" src="" alt="Produit avant" />
+            <img id="product-back" src="" alt="Produit arrière" />
+          </div>
+        </div>
+
+        <div class="product-details">
+          <h1 id="product-name"></h1>
+          <p class="price" id="product-price"></p>
+
+          <div class="color-choice">
+            <label>Color</label>
+            <span id="product-color" class="color-dot"></span>
+          </div>
+
+          <div class="size-choice">
+            <label for="size">Taille :</label>
+            <select id="size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+
+          <div class="quantity-choice">
+            <label>Quantité :</label>
+            <div class="quantity-buttons">
+              <button id="decrease">-</button>
+              <span id="quantity">1</span>
+              <button id="increase">+</button>
+            </div>
+          </div>
+
+          <button id="add-to-cart" class="add-to-cart">
+            AJOUTER AU PANIER
+          </button>
+        </div>
+      </div>
+      <!-- AUTRES PRODUITS -->
+      <section class="shop-section">
+        <div class="products-container">
+          <a href="produit.html?id=1" class="product-card" data-id="1">
+            <div class="product-image">
+              <img src="images/Shop/T1B.png" alt="T-shirt 1" class="front" />
+              <img src="images/Shop/T1F.png" alt="T-shirt 1" class="back" />
+            </div>
+            <h3>T-SHIRT TEMPLIER DRIVER</h3>
+            <p class="price">30,00 €</p>
+            <div class="color-dot" style="background-color: navy"></div>
+          </a>
+          <!-- 2 -->
+          <a href="produit.html?id=2" class="product-card" data-id="2">
+            <div class="product-image">
+              <img src="images/Shop/T2B.png" alt="T-shirt 1" class="front" />
+              <img src="images/Shop/T2F.png" alt="T-shirt 1" class="back" />
+            </div>
+            <h3>T-SHIRT TEMPLIER DRIVER</h3>
+            <p class="price">30,00 €</p>
+            <div class="color-dot" style="background-color: black"></div>
+          </a>
+          <!-- 3 -->
+          <a href="produit.html?id=3" class="product-card" data-id="3">
+            <div class="product-image">
+              <img src="images/Shop/mug1.png" alt="T-shirt 1" class="front" />
+              <img src="images/Shop/mug2.png" alt="T-shirt 1" class="back" />
+            </div>
+            <h3>MUG TEMPLIER DRIVER</h3>
+            <p class="price">30,00 €</p>
+            <div class="color-dot" style="background-color: navajowhite"></div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <hr class="footer-separator" />
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <p><strong>Templier Driver</strong></p>
+          <p>Qualité, Sécurité, Transparence.</p>
+          <div class="social-icons">
+            <a href="#"
+              ><img src="images/instagram.webp" alt="Instagram" width="20"
+            /></a>
+            <a href="#"
+              ><img src="images/facebook.png" alt="Facebook" width="20"
+            /></a>
+            <a href="#"
+              ><img src="images/tiktok.webp" alt="TikTok" width="20"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <p><strong>Contact</strong></p>
+          <p>templierdriver@gmail.com</p>
+          <p>(+33) 6 56 58 58 59</p>
+        </div>
+
+        <div class="footer-news">
+          <p><strong>S'inscrire</strong></p>
+          <p>
+            Inscrivez-vous à notre newsletter pour être informé de nos dernières
+            actualités.
+          </p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="E-mail" />
+            <button>→</button>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2025 Templier Driver. Tous droits réservés.</p>
+    </footer>
+
+    <script src="product.js"></script>
+  </body>
+</html>

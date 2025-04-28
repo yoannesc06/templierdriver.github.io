@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panier - Templier Driver</title>
+    <link rel="stylesheet" href="panier.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/LOGO.png" alt="Templier Driver Logo" />
+        </a>
+        <nav>
+          <a href="panier.html" class="cart-icon">
+            <img src="images/panier.png" alt="Panier" width="24" />
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PANIER : ICI sera généré dynamiquement avec JS -->
+    <main class="panier-container">
+      <h1>Votre panier</h1>
+      <div id="cart-items">
+        <!-- Les produits du panier vont s'afficher ici dynamiquement -->
+      </div>
+    </main>
+
+    <hr class="footer-separator" />
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <p><strong>Templier Driver</strong></p>
+          <p>Qualité, Sécurité, Transparence.</p>
+          <div class="social-icons">
+            <a href="#"
+              ><img src="images/instagram.webp" alt="Instagram" width="20"
+            /></a>
+            <a href="#"
+              ><img src="images/facebook.png" alt="Facebook" width="20"
+            /></a>
+            <a href="#"
+              ><img src="images/tiktok.webp" alt="TikTok" width="20"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <p><strong>Contact</strong></p>
+          <p>templierdriver@gmail.com</p>
+          <p>(+33) 6 56 58 58 59</p>
+        </div>
+
+        <div class="footer-news">
+          <p><strong>S'inscrire</strong></p>
+          <p>
+            Inscrivez-vous à notre newsletter pour être informé de nos dernières
+            actualités.
+          </p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="E-mail" />
+            <button>→</button>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2025 Templier Driver. Tous droits réservés.</p>
+    </footer>
+
+    <script src="panier.js"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templier Driver</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MorphSVGPlugin.min.js"></script>
+  </head>
+  <body>
+    <!-- CONTENU PRINCIPAL -->
+    <header>
+      <!-- PRELOADER -->
+      <div id="preloader">
+        <div class="loader-text">
+          <span id="loader-percent">0%</span>
+        </div>
+      </div>
+
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/LOGO.png" alt="Templier Driver Logo" />
+        </a>
+        <nav>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html ">Contact</a>
+          <a href="panier.html" class="cart-icon">
+            <img src="images/panier.png" alt="Panier" width="24" />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Qualité,<br />Sécurité,<br />Transparence.</h1>
+        <div class="btn-wrapper">
+          <a href="contact.html">
+            <button>Nous rejoindre</button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Qui suis-je ?</h2>
+    </section>
+    <!-- AVIS -->
+    <section class="avis-section">
+      <div class="avis-container">
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">
+            Un vrai coup de cœur pour l’univers<br />du Templier Driver.
+          </div>
+        </div>
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">
+            Super qualité, rien à dire.<br />Vive Templier Driver !
+          </div>
+        </div>
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">
+            Super, je recommande à fond !<br />Livraison rapide et produit top.
+          </div>
+        </div>
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">
+            Bonne qualité, bon prix, bon style.<br />Ho top !
+          </div>
+        </div>
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">
+            Super, je recommande à fond !<br />Vendeur sérieux
+          </div>
+        </div>
+
+        <!-- Copie x2 -->
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">
+            Tissu agréable, très bon rendu.<br />Je rachèterai c’est sûr.
+          </div>
+        </div>
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">
+            Fan de l’univers, trop stylé.<br />On en veut plus !
+          </div>
+        </div>
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">
+            Ultra quali, le style est unique.<br />GG l’équipe !
+          </div>
+        </div>
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">J’ai tout reçu en 2 jours.<br />Parfait !</div>
+        </div>
+        <div class="avis">
+          <div class="stars">★★★★★</div>
+          <div class="text">
+            Bien emballé, bon produit.<br />Très satisfait.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="footer-separator" />
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <p><strong>Templier Driver</strong></p>
+          <p>Qualité, Sécurité, Transparence.</p>
+          <div class="social-icons">
+            <a href="#"
+              ><img src="images/instagram.webp" alt="Instagram" width="20"
+            /></a>
+            <a href="#"
+              ><img src="images/facebook.png" alt="Facebook" width="20"
+            /></a>
+            <a href="#"
+              ><img src="images/tiktok.webp" alt="TikTok" width="20"
+            /></a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <p><strong>Contact</strong></p>
+          <p>templierdriver@gmail.com</p>
+          <p>(+33) 6 56 58 58 59</p>
+        </div>
+        <div class="footer-news">
+          <p><strong>S'inscrire</strong></p>
+          <p>
+            Inscrivez-vous à notre newsletter pour être informé de nos dernières
+            actualités.
+          </p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="E-mail" />
+            <button>→</button>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2025 Templier Driver. Tous droits réservés.</p>
+    </footer>
+    <link rel="stylesheet" href="script.js" />
+    <script>
+      const preloader = document.getElementById("preloader");
+      const loader = document.getElementById("loader-percent");
+
+      // Vérifie si c’est le premier chargement de la session
+      if (!sessionStorage.getItem("visited")) {
+        let percent = 0;
+        sessionStorage.setItem("visited", "true"); // Marque comme visité
+
+        const interval = setInterval(() => {
+          percent++;
+          loader.textContent = percent + "%";
+
+          if (percent >= 100) {
+            clearInterval(interval);
+            gsap.to(preloader, {
+              opacity: 0,
+              duration: 0.8,
+              onComplete: () => {
+                preloader.style.display = "none";
+              },
+            });
+          }
+        }, 20);
+      } else {
+        // Si déjà visité dans la session, on cache direct le preloader
+        preloader.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
