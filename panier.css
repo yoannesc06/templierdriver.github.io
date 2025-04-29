@@ -169,12 +169,14 @@ main.panier-container {
   font-weight: bold;
   font-size: 0.9rem;
   letter-spacing: 1px;
-  transition: background-color 0.3s;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .retour-bouton:hover {
   background-color: white;
   color: black;
+  border-color: black;
 }
 
 /* Récapitulatif */
