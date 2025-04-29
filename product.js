@@ -1,6 +1,23 @@
 // ID
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
+const target = document.querySelector(".other h1");
+// PRODUITS TEXTE
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        target.classList.add("typing");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
+
+observer.observe(target);
 
 // Liste des produits
 const products = {

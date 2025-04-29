@@ -212,8 +212,42 @@ select {
 }
 
 /* AUTRES PRODUITS */
+.other {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.other h1 {
+  font-size: 60px;
+  overflow: hidden;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  width: 0;
+}
+
+.typing {
+  animation: typing 3s steps(20) forwards, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .shop-section {
-  margin-top: 10rem;
+  margin-top: 5rem;
   padding: 50px 20px;
   display: flex;
   justify-content: center;
