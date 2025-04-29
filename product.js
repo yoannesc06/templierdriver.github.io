@@ -72,8 +72,6 @@ if (products[productId]) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push(cartProduct);
     localStorage.setItem("cart", JSON.stringify(cart));
-
-    alert("Produit ajouté au panier !");
   });
 } else {
   document.body.innerHTML = "<h1>Produit introuvable</h1>";
