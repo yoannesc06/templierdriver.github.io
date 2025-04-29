@@ -19,17 +19,26 @@
         </nav>
       </div>
     </header>
-
-    <!-- PANIER : ICI sera généré dynamiquement avec JS -->
+    <!-- PANIER -->
     <main class="panier-container">
-      <h1>Votre panier</h1>
-      <div id="cart-items">
-        <!-- Les produits du panier vont s'afficher ici dynamiquement -->
+      <div class="panier-content">
+        <!-- Liste des produits chargée par JS -->
+        <div class="panier-produits"></div>
+        <div class="panier-vide" style="display: none">
+          <p class="panier-empty-text">VOTRE PANIER EST VIDE</p>
+          <a href="shop.html" class="retour-bouton">ACHETEZ NOS PRODUITS</a>
+        </div>
+
+        <!-- Récapitulatif -->
+        <div class="panier-recap">
+          <h3>Total</h3>
+          <p class="total" id="total">0,00 €</p>
+          <button class="commander">Passer commande</button>
+        </div>
       </div>
     </main>
-
+    <!-- FOOTER -->
     <hr class="footer-separator" />
-
     <footer>
       <div class="footer-container">
         <div class="footer-logo">

@@ -113,7 +113,6 @@ section p {
   font-size: 1.1rem;
   border: none;
   cursor: pointer;
-  border-radius: 6px;
   transition: background 0.3s ease;
 }
 .hero button {
@@ -121,7 +120,6 @@ section p {
   background: white;
   color: black;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   margin-bottom: 4rem;
