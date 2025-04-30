@@ -44,7 +44,7 @@ const products = {
   },
 };
 
-// Vérifier si ID existe
+// Verifie si ID existe
 if (products[productId]) {
   const product = products[productId];
 
@@ -80,7 +80,7 @@ if (products[productId]) {
 
     const cartProduct = {
       name: product.name,
-      price: parseFloat(product.price), // ici je transforme en nombre
+      price: parseFloat(product.price),
       size: size,
       quantity: quantity,
       image: product.frontImage,
