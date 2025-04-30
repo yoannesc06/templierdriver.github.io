@@ -143,6 +143,7 @@ section p {
   background-color: black;
   color: white;
   border-color: black;
+  cursor: url("images/e418af07-1937-441a-9426-67b9c2ef2f0f.png"), pointer;
 }
 
 .btn-wrapper {

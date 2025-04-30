@@ -190,7 +190,7 @@ select {
   margin: 0 6px;
   font-size: 16px;
 }
-/* ACHETER */
+/* AJOUTER AU PANIER */
 .add-to-cart {
   cursor: pointer;
   display: inline-block;
@@ -209,6 +209,40 @@ select {
   background-color: white;
   color: black;
   border-color: black;
+}
+.add-to-cart.clicked {
+  animation: bounce 0.3s ease;
+  background-color: black;
+  color: white;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* AUTRES PRODUITS */

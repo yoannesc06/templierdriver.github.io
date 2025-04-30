@@ -2,6 +2,30 @@
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 const target = document.querySelector(".other h1");
+const addToCartBtn = document.getElementById("add-to-cart");
+const cartIcon = document.getElementById("cart-icon");
+const cartCount = document.getElementById("cart-count");
+// ANIM DU AJOUTER AU PANIER
+let count = 0;
+
+addToCartBtn.addEventListener("click", () => {
+  // bouton anim
+  addToCartBtn.classList.add("clicked");
+  setTimeout(() => {
+    addToCartBtn.classList.remove("clicked");
+  }, 300);
+
+  // panier anim
+  cartIcon.classList.add("shake");
+  setTimeout(() => {
+    cartIcon.classList.remove("shake");
+  }, 400);
+
+  // mise à jour du compteur
+  count++;
+  cartCount.textContent = count;
+});
+
 // PRODUITS TEXTE
 const observer = new IntersectionObserver(
   (entries) => {
