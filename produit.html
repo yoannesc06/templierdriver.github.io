@@ -10,7 +10,10 @@
     <header>
       <div class="header-inner">
         <a href="index.html" class="logo">
-          <img src="images/LOGO.png" alt="Templier Driver Logo" />
+          <img
+            src="images/LOGO TEMPLIER DRIVER.svg"
+            alt="Templier Driver Logo"
+          />
         </a>
         <nav>
           <a href="panier.html" class="cart-icon">
@@ -66,7 +69,7 @@
       <hr class="footer-separator" />
       <!-- AUTRES PRODUITS -->
       <div class="other">
-        <h1>AUTRES PRODUITS</h1>
+        <h1>VOUS AIMEREZ PEUT-ETRE AUSSI</h1>
       </div>
 
       <section class="shop-section">
@@ -145,5 +148,24 @@
     </footer>
 
     <script src="product.js"></script>
+    <script>
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom >= 0;
+      }
+
+      const otherElement = document.querySelector(".other");
+
+      function handleScroll() {
+        if (isInViewport(otherElement)) {
+          otherElement.classList.add("show");
+          window.removeEventListener("scroll", handleScroll); // Une seule fois
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      // Appelle au chargement aussi au cas où l'élément est déjà visible
+      handleScroll();
+    </script>
   </body>
 </html>

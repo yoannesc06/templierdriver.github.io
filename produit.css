@@ -30,7 +30,7 @@ header {
 }
 
 .logo img {
-  height: 50px;
+  height: 60px;
   width: auto;
 }
 
@@ -213,41 +213,25 @@ select {
 
 /* AUTRES PRODUITS */
 .other {
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
-  margin-left: 3rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.other.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .other h1 {
-  font-size: 60px;
-  overflow: hidden;
-  border-right: 2px solid white;
-  white-space: nowrap;
-  width: 0;
-}
-
-.typing {
-  animation: typing 3s steps(20) forwards, blink 0.5s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 18ch;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  font-size: 40px;
 }
 
 .shop-section {
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 50px 20px;
   display: flex;
   justify-content: center;
