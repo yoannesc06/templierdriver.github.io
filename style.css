@@ -41,6 +41,27 @@ body {
 }
 
 /* HEADER */
+/* Menu Burger */
+.burger {
+  margin-right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.burger span {
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  width: 100%;
+}
+
 header {
   background: #000;
   color: #fff;
@@ -267,4 +288,51 @@ footer .copyright {
   margin-top: 30px;
   font-size: 13px;
   color: #555;
+}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  /* HEADER */
+  .burger {
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  nav#nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  nav#nav-links.active {
+    display: flex;
+  }
+
+  nav#nav-links a {
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    text-align: center;
+  }
+  /* IMAGE HOMEPAGE  */
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+  .hero {
+    background-image: url("images/homepage.jpg");
+    background-size: auto;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 5%;
+    color: white;
+  }
 }
