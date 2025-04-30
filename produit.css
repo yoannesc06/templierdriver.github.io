@@ -336,48 +336,6 @@ h3 {
   margin-top: 8px;
 }
 /* Footer */
-.footer-separator {
-  margin-top: 100px;
-}
-
-footer {
-  background: #f5f5f5;
-  padding: 50px 20px;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.footer-logo,
-.footer-contact,
-.footer-news {
-  flex: 1 1 200px;
-}
-
-.newsletter-form {
-  display: flex;
-  margin-top: 10px;
-}
-
-.newsletter-form input {
-  flex: 1;
-  padding: 8px;
-}
-
-.newsletter-form button {
-  background: black;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
 /* FOOTER */
 .footer-separator {
   border: none;
@@ -415,6 +373,13 @@ footer {
 .footer-logo .social-icons a {
   margin-right: 12px;
   display: inline-block;
+  font-size: 20px;
+  color: black; /* Icônes en noir */
+  text-decoration: none;
+}
+
+.footer-logo .social-icons a:hover {
+  color: #555; /* Effet au survol (un gris) */
 }
 
 .footer-contact p,

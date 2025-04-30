@@ -184,6 +184,13 @@ footer {
 .footer-logo .social-icons a {
   margin-right: 12px;
   display: inline-block;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.footer-logo .social-icons a:hover {
+  color: #555;
 }
 
 .footer-contact p,

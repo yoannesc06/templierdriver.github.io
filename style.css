@@ -212,6 +212,7 @@ section p {
     transform: translateX(-50%);
   }
 }
+
 /* FOOTER */
 .footer-separator {
   border: none;
@@ -249,6 +250,13 @@ footer {
 .footer-logo .social-icons a {
   margin-right: 12px;
   display: inline-block;
+  font-size: 20px;
+  color: black; /* Icônes en noir */
+  text-decoration: none;
+}
+
+.footer-logo .social-icons a:hover {
+  color: #555; /* Effet au survol (un gris) */
 }
 
 .footer-contact p,
