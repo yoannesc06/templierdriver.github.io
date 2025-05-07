@@ -165,8 +165,10 @@ main.panier-container {
 }
 /* QUAND YA PAS DE PRODUIT */
 .panier-vide {
+  margin-left: 29rem;
   text-align: center;
-  margin: 100px auto;
+  margin-top: 15rem;
+  margin-bottom: 30rem;
 }
 
 .panier-empty-text {
@@ -177,7 +179,6 @@ main.panier-container {
 }
 
 .retour-bouton {
-  display: inline-block;
   background-color: #000;
   color: white;
   text-decoration: none;
@@ -320,4 +321,42 @@ footer .copyright {
   margin-top: 30px;
   font-size: 13px;
   color: #555;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  /* PANIER VIDE */
+  .panier-vide {
+    margin-left: 0rem;
+    text-align: center;
+    margin-top: 15rem;
+    margin-bottom: 25rem;
+    display: flex;
+    justify-content: center;
+  }
+  .panier-empty-text {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #111;
+  }
+
+  .retour-bouton {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+
+  .retour-bouton:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+  }
 }
