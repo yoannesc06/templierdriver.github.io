@@ -84,7 +84,7 @@ body {
 }
 
 header {
-  background: #000;
+  background: rgba(0, 0, 0, 0.85);
   color: #fff;
   padding: 1rem 2rem;
   position: fixed;
