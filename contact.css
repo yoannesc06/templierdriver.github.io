@@ -7,6 +7,7 @@ body {
   background: #fff;
   color: #000;
 }
+
 /* HEADER */
 /* Menu Burger */
 .burger {
@@ -14,12 +15,14 @@ body {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 50px;
+  width: 40px;
   height: 28px;
   background: none;
   border: none;
   cursor: pointer;
   z-index: 10001;
+  justify-content: center;
+  gap: 6px;
 }
 
 .burger span {
@@ -27,7 +30,27 @@ body {
   background: white;
   border-radius: 5px;
   width: 100%;
+  transition: all 0.3s ease;
+  transform-origin: center;
 }
+
+/* CROIX quand ouvert */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+  margin-left: 5%;
+  margin-top: 30%;
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+  margin-left: 5%;
+  margin-bottom: 10%;
+}
+
 header {
   background: #000;
   color: #fff;
@@ -36,6 +59,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 9999;
 }
 
 .header-inner {
@@ -47,7 +71,7 @@ header {
 }
 
 .logo img {
-  height: 50px;
+  height: 60px;
   width: auto;
 }
 
@@ -74,10 +98,6 @@ nav a {
   cursor: pointer;
 }
 /* FORMULAIRE */
-* {
-  box-sizing: border-box;
-  font-family: "Helvetica", sans-serif;
-}
 .contact-section {
   margin-top: 5rem;
   padding: 50px 20px;
@@ -247,7 +267,6 @@ footer .copyright {
   font-size: 13px;
   color: #555;
 }
-/* Responsive */
 @media screen and (max-width: 768px) {
   /* HEADER */
   .burger {
@@ -258,23 +277,35 @@ footer .copyright {
   }
 
   nav#nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #000;
+    box-sizing: border-box;
+    padding: 4rem 1.5rem 0;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.85);
     flex-direction: column;
-    width: 100%;
-    display: none;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    padding-top: 4rem;
+    transition: left 0.4s ease;
+    z-index: 10000;
   }
 
   nav#nav-links.active {
-    display: flex;
+    left: 0;
   }
 
   nav#nav-links a {
-    padding: 1rem;
+    margin-left: 2rem;
+    color: white;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 1rem 0rem;
     border-bottom: 1px solid #333;
-    text-align: center;
+    text-align: left;
   }
   /* IMAGE HOMEPAGE  */
   .header-inner {

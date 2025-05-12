@@ -5,6 +5,14 @@ const target = document.querySelector(".other h1");
 const addToCartBtn = document.getElementById("add-to-cart");
 const cartIcon = document.getElementById("cart-icon");
 const cartCount = document.getElementById("cart-count");
+// MENU BURGER
+const burger = document.getElementById("burger");
+const nav = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  burger.classList.toggle("open");
+});
 // ANIM DU AJOUTER AU PANIER
 let count = 0;
 
