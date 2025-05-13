@@ -111,6 +111,34 @@ nav a {
   cursor: pointer;
 }
 /* FORMULAIRE */
+.form-group.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #a5a5a5;
+}
+.input-style {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-family: inherit;
+  background-color: white;
+  color: #333;
+}
+
+.form-group.row select {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+}
+
 .contact-section {
   margin-top: 5rem;
   margin-left: auto;

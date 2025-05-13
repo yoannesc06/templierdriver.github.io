@@ -50,19 +50,60 @@
             <span class="mac-dot green"></span>
           </div>
           <form class="formulaire">
-            <div class="row">
-              <input type="text" placeholder="Prenom" required />
-              <input type="text" placeholder="Nom" required />
-            </div>
-            <input type="email" placeholder="E-mail" required />
-            <input type="tel" placeholder="Portable" required />
-            <input type="text" placeholder="Adresse postale" required />
-            <div class="row">
-              <input type="text" placeholder="Ville" required />
-              <input type="text" placeholder="Code postal" required />
-            </div>
-            <button type="submit">Envoyer</button>
-          </form>
+  <div class="row">
+    <input type="text" placeholder="Prenom" required />
+    <input type="text" placeholder="Nom" required />
+  </div>
+  <input type="email" placeholder="E-mail" required />
+  <input type="tel" placeholder="Portable" required />
+  <input type="text" placeholder="Adresse postale" required />
+  <div class="form-group row">
+  <label for="birthdate" style="width: 100%;">Date de naissance</label>
+
+  <select name="jour" required>
+    <option value="">Jour</option>
+    <!-- Jours 1 à 31 -->
+    <script>
+      for (let i = 1; i <= 31; i++) {
+        document.write(`<option value="${i}">${i}</option>`);
+      }
+    </script>
+  </select>
+
+  <select name="mois" required>
+    <option value="">Mois</option>
+    <option value="1">Janvier</option>
+    <option value="2">Février</option>
+    <option value="3">Mars</option>
+    <option value="4">Avril</option>
+    <option value="5">Mai</option>
+    <option value="6">Juin</option>
+    <option value="7">Juillet</option>
+    <option value="8">Août</option>
+    <option value="9">Septembre</option>
+    <option value="10">Octobre</option>
+    <option value="11">Novembre</option>
+    <option value="12">Décembre</option>
+  </select>
+
+  <select name="annee" required>
+    <option value="">Année</option>
+    <script>
+      const currentYear = new Date().getFullYear();
+      for (let i = currentYear; i >= 1900; i--) {
+        document.write(`<option value="${i}">${i}</option>`);
+      }
+    </script>
+  </select>
+</div>
+
+  <div class="row">
+    <input type="text" placeholder="Ville" required />
+    <input type="text" placeholder="Code postal" required />
+  </div>
+  <button type="submit">Envoyer</button>
+</form>
+
         </div>
     </section>
     <!-- FOOTER -->
