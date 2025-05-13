@@ -15,3 +15,20 @@ window.addEventListener("scroll", () => {
     h1.classList.add("visible");
   }
 });
+// CONTENT
+document.addEventListener("DOMContentLoaded", () => {
+  const contentTop = document.getElementById("content-top");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          contentTop.classList.add("show");
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  observer.observe(contentTop);
+});
