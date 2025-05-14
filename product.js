@@ -69,7 +69,7 @@ const products = {
   },
   3: {
     name: "MUG TEMPLIER DRIVER",
-    price: "30.00 €",
+    price: "15.00 €",
     frontImage: "images/Shop/mug1.png",
     backImage: "images/Shop/mug2.png",
     color: "navajowhite",

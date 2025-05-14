@@ -140,10 +140,10 @@ section p {
   padding-left: 55px;
 }
 .hero {
-  background-image: url("images/homepage.jpg");
+  background-image: url("images/porshe\ V2.png");
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -163,7 +163,7 @@ section p {
 }
 
 .hero-text button {
-  margin-top: 4rem;
+  margin-top: 30rem;
   padding: 10px 20px;
   font-size: 1.1rem;
   border: none;
@@ -183,9 +183,9 @@ section p {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 .hero-text button:hover {
-  background-color: black;
+  background-color: transparent;
   color: white;
-  border-color: black;
+  border-color: white;
   cursor: url("images/e418af07-1937-441a-9426-67b9c2ef2f0f.png"), pointer;
 }
 
@@ -198,7 +198,11 @@ section p {
   overflow: hidden;
   position: relative;
 }
-
+/* Supprimer les effets d'apparition */
+.content-top {
+  text-align: left;
+  opacity: 1;
+}
 .content-top {
   text-align: left;
   opacity: 0;
@@ -210,32 +214,27 @@ section p {
   opacity: 1;
   transform: translateY(0);
 }
+/* Conteneur avec scroll horizontal */
+.content-boxes-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Image panoramique scrollable */
+.panorama-img {
+  height: 800px;
+  width: auto;
+  display: block;
+}
 
 .content-top h2 {
   font-family: "Inter", sans-serif;
   font-size: 7rem;
   font-weight: 900;
   line-height: 1.2;
-  margin-bottom: 10rem;
-}
-
-.content-boxes {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.content-img {
-  width: 1530px;
-  height: 700px;
-  object-fit: cover;
-}
-
-.content-scroll {
-  margin-top: 60px;
-  position: relative;
+  margin-bottom: 5rem;
 }
 
 .scroll-line {
@@ -254,7 +253,7 @@ section p {
 }
 
 .scroll-line.left p {
-  animation: scroll-left 100s linear infinite;
+  animation: scroll-left 30s linear infinite;
 }
 
 @keyframes scroll-left {
@@ -263,48 +262,6 @@ section p {
   }
   100% {
     transform: translateX(-100%);
-  }
-}
-
-/* AVIS */
-.avis-section {
-  background-color: #f3f3f3;
-  overflow: hidden;
-  padding: 40px 0;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-}
-
-.avis-container {
-  display: flex;
-  width: max-content;
-  animation: defilement 30s linear infinite;
-}
-
-.avis {
-  background: transparent;
-  border-radius: 8px;
-  margin: 0 40px;
-  min-width: 250px;
-  text-align: center;
-}
-
-.stars {
-  color: black;
-  font-size: 1.5rem;
-}
-
-.text {
-  margin-top: 10px;
-  color: #333;
-}
-
-@keyframes defilement {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
   }
 }
 
@@ -412,6 +369,9 @@ footer .copyright {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
+  .body {
+    overflow-x: hidden;
+  }
   /* HEADER */
   .burger {
     display: flex;
@@ -458,17 +418,36 @@ footer .copyright {
     position: relative;
   }
   .hero {
-    background-image: url("images/homepage.jpg");
+    background-image: url("images/homepage2.png");
     background-size: auto;
     background-position: center;
-    height: 70vh;
+    height: 100vh;
+    width: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0 5%;
     color: white;
   }
+  .hero-text button {
+    margin-top: 24rem;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
   /* CONTENT */
+  body,
+  .content {
+    padding: 0;
+    margin: 0;
+  }
+
+  .content {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
   .content-top h2 {
     font-size: 3.5rem;
     margin-bottom: 4rem;
@@ -476,20 +455,19 @@ footer .copyright {
     margin-right: 20rem;
     padding-left: 5rem;
   }
-
-  .content-boxes {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .content-img {
-    width: 100%;
-    height: auto;
-    max-height: 350px;
-  }
-
   .scroll-line {
     font-size: 4rem;
+  }
+  .content-boxes-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+  }
+
+  .panorama-img {
+    height: 800px;
+    width: auto;
+    display: block;
+    max-width: none;
   }
 }
