@@ -25,6 +25,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <header>
@@ -70,13 +72,26 @@
         </div>
       </div>
     </section>
+    <!-- INFO -->
+    <section class="about-section">
+      <div class="about-text">
+        <h2 class="animated-title">QUI SUIS–JE ?</h2>
+        <p class="typewriter-gsap">
+          Je suis Yann Barthes, passionné par l’univers automobile futuriste.
+          Toujours en quête d’innovation, je fusionne technologie et style pour
+          créer des expériences uniques. “Just trust in you.”
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="images/photo profil.png" alt="Yann Barthes" />
+        <h3>Yann Barthes</h3>
+        <p class="slogan">“Just trust in you”</p>
+      </div>
+    </section>
+
     <!-- CONTENT -->
     <section class="content">
       <div class="content-top" id="content-top">
-        <h2>
-          Just Trust<br />
-          In You.
-        </h2>
         <div class="content-boxes-scroll">
           <img
             src="images/banniere porshe.jpg"
@@ -85,12 +100,31 @@
           />
         </div>
       </div>
+      <!-- TEXTE QUI DEFILE -->
       <div class="content-scroll">
         <div class="scroll-line left">
           <p>
-            PUSH ! PUSH ! PUSH ! PUSH ! PUSH ! PUSH ! PUSH ! PUSH ! PUSH ! PUSH
-            ! PUSH ! PUSH !PUSH ! PUSH ! PUSH ! PUSH ! PUSH ! PUSH ! PUSH ! PUSH
-            ! PUSH ! PUSH ! PUSH !
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
+            <img src="images/damier.jpg" alt="push" class="push-icon" />
+            PUSH,PUSH,PUSH
           </p>
         </div>
       </div>
@@ -170,6 +204,33 @@
         // Si déjà visité dans la session, on cache direct le preloader
         preloader.style.display = "none";
       }
+      gsap.registerPlugin(ScrollTrigger);
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const paragraph = document.querySelector(".typewriter-gsap");
+        if (!paragraph) return;
+
+        const text = paragraph.textContent.trim();
+        paragraph.textContent = "";
+
+        const letters = text.split("").map((letter) => {
+          const span = document.createElement("span");
+          span.textContent = letter;
+          paragraph.appendChild(span);
+          return span;
+        });
+
+        gsap.to(letters, {
+          scrollTrigger: {
+            trigger: paragraph,
+            start: "top 80%",
+          },
+          opacity: 1,
+          duration: 0.03,
+          stagger: 0.03,
+          ease: "power1.inOut",
+        });
+      });
     </script>
   </body>
 </html>
