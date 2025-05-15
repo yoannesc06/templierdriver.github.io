@@ -312,7 +312,7 @@ section p {
 
 /* TEXTE QUI DEFILE */
 .push-icon {
-  height: 40rem; /* adapte la taille au texte */
+  height: 40rem;
   vertical-align: middle;
 }
 
