@@ -32,13 +32,17 @@ html {
   color: white;
   font-size: 1.5rem;
 }
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
   background: #fff;
   color: #000;
-  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -238,76 +242,83 @@ section p {
 }
 /* INFO */
 .about-section {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-around;
-  padding: 60px 20px;
-  color: black;
+  padding: 80px 10%;
+  background: #f8f9fa;
+  font-family: "Segoe UI", sans-serif;
+  gap: 50px;
 }
 
 .about-text {
   max-width: 600px;
-  flex: 1;
-  padding: 20px;
-}
-.about-image .slogan {
-  margin-left: 14rem;
-  font-style: italic;
-  color: #bbb;
-  font-size: 1rem;
-}
-.about-image h3 {
-  margin-right: 10rem;
-}
-.about-image {
-  text-align: center;
-  flex: 1;
 }
 
-.about-image img {
-  max-width: 300px;
-  width: 100%;
-  margin-bottom: 15px;
-}
 .animated-title {
-  font-size: 2.5rem;
-  font-weight: 900;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
   position: relative;
   display: inline-block;
-  margin-bottom: 20px;
-  overflow: hidden;
 }
 
 .animated-title::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
+  width: 60px;
   height: 4px;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease;
-}
-
-.animated-title:hover::after {
-  transform: scaleX(1);
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px;
 }
 
 .typewriter-gsap {
-  font-family: "Inter", sans-serif;
   font-size: 1.2rem;
-  white-space: normal; /* ← très important */
-  overflow-wrap: break-word;
+  color: #333;
   line-height: 1.6;
-  max-width: 600px;
-  margin-top: 20px;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
 }
 
-.typewriter-gsap span {
-  opacity: 0;
-  display: inline-block;
+.about-image {
+  text-align: center;
+}
+
+.about-image img {
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-image h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.slogan {
+  margin-top: -1rem;
+  margin-left: 11rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 /* TEXTE QUI DEFILE */
@@ -499,7 +510,7 @@ footer .copyright {
     position: relative;
   }
   .hero {
-    background-image: url("images/homepage2.png");
+    background-image: url("images/porshe-mobile.png");
     background-size: auto;
     background-position: center;
     height: 100vh;
@@ -511,7 +522,7 @@ footer .copyright {
     color: white;
   }
   .hero-text button {
-    margin-top: 24rem;
+    margin-top: 32rem;
     padding: 10px 20px;
     font-size: 1.1rem;
     border: none;
@@ -550,5 +561,46 @@ footer .copyright {
     width: auto;
     display: block;
     max-width: none;
+  }
+  /* INFO */
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 60px 5%;
+    text-align: center;
+    justify-items: center; /* centre les éléments dans la grille */
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .animated-title {
+    font-size: 2.2rem;
+    margin: 0 auto 20px;
+    margin-left: -3rem;
+  }
+
+  .typewriter-gsap {
+    font-size: 1rem;
+    margin-left: -2rem;
+  }
+
+  .about-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-image h3 {
+    font-size: 1.2rem;
+  }
+
+  .slogan {
+    margin-left: -3rem;
   }
 }
