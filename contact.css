@@ -111,6 +111,16 @@ nav a {
   cursor: pointer;
 }
 /* FORMULAIRE */
+.form-group.row select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+}
+
 .form-group.row {
   display: flex;
   flex-wrap: wrap;
