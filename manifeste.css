@@ -1,0 +1,105 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* HEADER */
+/* Menu Burger */
+.burger {
+  margin-right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10001;
+  justify-content: center;
+  gap: 6px;
+}
+
+.burger span {
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* CROIX quand ouvert */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+  margin-left: 5%;
+  margin-top: 30%;
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+  margin-left: 5%;
+  margin-bottom: 10%;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon img {
+  vertical-align: middle;
+}
+
+.cart-icon {
+  margin-left: 0, 5rem;
+  cursor: pointer;
+}
