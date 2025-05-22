@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="grades.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- HEADER -->
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="images/LOGO TEMPLIER DRIVER.svg"
+            alt="Templier Driver Logo"
+          />
+        </a>
+        <!-- MENU BURGER -->
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- NAV -->
+        <nav id="nav-links">
+          <a href="grades.html">Grades</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+          <a href="panier.html" class="cart-icon">
+            <img src="images/panier.png" alt="Panier" width="24" />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- GRADES -->
+    <div class="text-card">
+      <h2>GRADES DES TEMPLIERS</h2>
+    </div>
+    <div class="cards-container">
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">Grade 1</div>
+          <div class="card-back">blablabla</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">Grade 2</div>
+          <div class="card-back">blablabla</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">Grade 3</div>
+          <div class="card-back">blablabla</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // CARD 3D
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+      let isFlipped = false;
+
+      const inner = card.querySelector(".card-inner");
+
+      card.addEventListener("mousemove", (e) => {
+        if (card.classList.contains("flipped")) return;
+
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * 30;
+        const rotateY = ((x - centerX) / centerX) * -30;
+
+        inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        if (!card.classList.contains("flipped")) {
+          inner.style.transform = `rotateX(0deg) rotateY(0deg)`;
+        }
+      });
+
+      card.addEventListener("click", () => {
+        card.classList.toggle("flipped");
+        if (card.classList.contains("flipped")) {
+          inner.style.transform = `rotateY(180deg)`;
+        } else {
+          inner.style.transform = `rotateX(0deg) rotateY(0deg)`;
+        }
+      });
+    });
+    // menu burger
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("nav-links");
+
+    burger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      burger.classList.toggle("open");
+    });
+  </script>
+</html>

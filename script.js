@@ -6,15 +6,22 @@ burger.addEventListener("click", () => {
   nav.classList.toggle("active");
   burger.classList.toggle("open");
 });
-// INFO
-const h1 = document.querySelector(".scroll-fade");
-
-window.addEventListener("scroll", () => {
-  const rect = h1.getBoundingClientRect();
-  if (rect.top < window.innerHeight - 100) {
-    h1.classList.add("visible");
+// FIRST TEXT
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  {
+    threshold: 0.5,
   }
-});
+);
+
+document.querySelectorAll(".scroll-text").forEach((el) => observer.observe(el));
+
 // CONTENT
 document.addEventListener("DOMContentLoaded", () => {
   const contentTop = document.getElementById("content-top");
