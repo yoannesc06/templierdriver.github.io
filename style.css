@@ -212,6 +212,7 @@ section p {
 .quest-container {
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: -15rem;
   text-align: center;
 }
 
@@ -279,7 +280,7 @@ section p {
   transform: translateX(0);
 }
 
-/* Effet de brillance  */
+/* brillance  */
 .quest-title::before {
   content: "";
   position: absolute;
@@ -299,8 +300,11 @@ section p {
 .quest-title.animate::before {
   left: 100%;
 }
+.quest-text p {
+  font-size: 20rem;
+}
 
-/* Lignes décoratives  */
+/* lignes décoratives  */
 .quest-text::after {
   content: "";
   position: absolute;
@@ -318,7 +322,7 @@ section p {
   width: 60%;
 }
 
-/* Animation de pulsation  */
+/* anim de pulsation  */
 .quest-container.animate {
   animation: subtle-pulse 4s ease-in-out infinite;
 }
@@ -333,7 +337,7 @@ section p {
   }
 }
 
-/* Particules flottantes (optionnel) */
+/* particules flottantes MARCHE PAS A VOIR*/
 .quest-section::before {
   content: "";
   position: absolute;
@@ -370,7 +374,7 @@ section p {
   overflow: hidden;
   position: relative;
 }
-/* Supprimer les effets d'apparition */
+
 .content-top {
   text-align: left;
   opacity: 1;

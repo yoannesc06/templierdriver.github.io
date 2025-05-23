@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         panierData[index].quantity--;
       }
 
-      // Met a jour le texte affiche
+      // met a jour le texte affiche
       const quantityEl = document.getElementById(`quantity-${index}`);
       quantityEl.textContent = panierData[index].quantity;
 

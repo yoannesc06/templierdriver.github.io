@@ -1,5 +1,4 @@
 // TEXT INTRO
-// Observer pour détecter quand la section entre dans le viewport
 const observerOptions = {
   threshold: 0.3,
   rootMargin: "0px 0px -100px 0px",
@@ -10,7 +9,7 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const section = entry.target;
 
-      // Animation du titre principal
+      // anima titre principal
       setTimeout(() => {
         section.querySelector(".quest-title").classList.add("animate");
       }, 200);
@@ -23,12 +22,12 @@ const observer = new IntersectionObserver((entries) => {
         }, 800 + index * 300);
       });
 
-      // Animation du conteneur
+      // anima conteneur
       setTimeout(() => {
         section.querySelector(".quest-container").classList.add("animate");
       }, 2000);
 
-      // Arrêter l'observation une fois l'animation déclenchée
+      // arreter l'observation une fois l'animation déclenchée
       observer.unobserve(section);
     }
   });
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Animation de scroll fluide avec parallaxe légère
+// animation de scroll fluide
 window.addEventListener("scroll", () => {
   const questSection = document.getElementById("quest-section");
   if (questSection) {

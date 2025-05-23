@@ -51,7 +51,7 @@ const observer = new IntersectionObserver(
 
 observer.observe(target);
 
-// Liste des produits
+// liste des produits
 const products = {
   1: {
     name: "T-SHIRT TEMPLIER DRIVER",
@@ -76,7 +76,7 @@ const products = {
   },
 };
 
-// Verifie si ID existe
+// verifie si ID existe
 if (products[productId]) {
   const product = products[productId];
 
@@ -87,7 +87,7 @@ if (products[productId]) {
   document.getElementById("product-color").style.backgroundColor =
     product.color;
 
-  // Quantité
+  // quantité
   const quantityEl = document.getElementById("quantity");
   const increaseBtn = document.getElementById("increase");
   const decreaseBtn = document.getElementById("decrease");
@@ -105,7 +105,7 @@ if (products[productId]) {
     }
   });
 
-  // Ajouter au panier
+  // ajouter au panier
   const addToCartBtn = document.getElementById("add-to-cart");
   addToCartBtn.addEventListener("click", () => {
     const size = document.getElementById("size").value;

@@ -17,7 +17,7 @@ document.addEventListener("mousemove", (e) => {
 // FLUIDE
 const formWrapper = document.querySelector(".mac-window");
 
-// Crée un élément pour le glow
+// Crée un élément
 const glow = document.createElement("div");
 glow.classList.add("mouse-glow");
 formWrapper.appendChild(glow);
