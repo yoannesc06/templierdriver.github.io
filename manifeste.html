@@ -3,7 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Templier Driver - Notre Manifeste</title>
+    <link rel="stylesheet" href="manifeste.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <!-- HEADER -->
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="images/LOGO TEMPLIER DRIVER.svg"
+            alt="Templier Driver Logo"
+          />
+        </a>
+        <!-- MENU BURGER -->
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- NAV -->
+        <nav id="nav-links">
+          <a href="manifeste.html">Notre manifeste</a>
+          <a href="grades.html">Grades</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+          <a href="panier.html" class="cart-icon">
+            <img src="images/panier.png" alt="Panier" width="24" />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- INFO -->
+    <section class="about-section">
+      <div class="about-text">
+        <h2 class="animated-title">MANIFESTE TEMPLIER DRIVER</h2>
+        <p class="typewriter-gsap">
+          Nous sommes les héritiers d'un temps où chaque geste avait du sens, où
+          l'honneur guidait les pas, où le dépassement de soi était une
+          discipline sacrée.<br />
+          <br />Nous ne roulons pas pour la gloire ni pour la reconnaissance :
+          <br />nous roulons pour la vérité brute du pilotage, pour la liberté
+          d'ouvrir la voie, pour l'ivresse pure de la maîtrise.<br />
+          <br />Templier Driver n'est pas une marque.<br />
+          C'est un Ordre, un esprit, une signature.<br />
+          Un ordre secret et ouvert, réservé à ceux qui vivent avec la passion
+          pour serment et la vitesse comme rite initiatique.<br />
+          <br />Un sceau rare. Silencieux.<br />
+          Porté par celles et ceux qui pilotent avec précision, exigence,
+          élégance.<br />
+          Ici, chaque virage est un serment.<br />
+          Chaque ligne droite, une déclaration de liberté.
+        </p>
+        <hr />
+        <p class="typewriter-gsap">
+          Nous refusons le bruit, le banal, le vite oublié.<br />
+          Nous choisissons la rareté, le style, la trace.<br />
+          Le luxe d'aller vite… avec grâce.<br />
+          Dans un monde saturé, nous incarnons l'épure.<br />
+          Dans un monde pressé, nous valorisons la maîtrise.<br />
+          Dans un monde sans cap, nous gardons le nôtre.
+        </p>
+        <hr />
+        <p class="typewriter-gsap">
+          Notre emblème ne s'achète pas.<br />
+          Il se mérite.<br />
+          Par la conduite. Par l'esprit.<br />
+          Par le respect d'un code invisible que seuls les vrais pilotes
+          comprennent.<br />
+          Il unit les chevaliers du bitume, de la terre, du sable, de la glace,
+          les seigneurs de l'asphalte, les maîtres de trajectoire sur terre, air
+          et mer.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="images/photo profil.png" alt="Yann Barthes" />
+        <h3>Yann Barthes</h3>
+        <p class="slogan">"Just trust in you"</p>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <hr class="footer-separator" />
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <p><strong>Templier Driver</strong></p>
+          <p>Qualité, Sécurité, Transparence.</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/" class="social-icon"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <p><strong>Contact</strong></p>
+          <p>templierdriver@gmail.com</p>
+          <p>(+33) 6 56 58 58 59</p>
+        </div>
+
+        <div class="footer-news">
+          <p><strong>S'inscrire</strong></p>
+          <p>
+            Inscrivez-vous à notre newsletter pour être informé de nos dernières
+            actualités.
+          </p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="E-mail" />
+            <button>→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Templier Driver. Tous droits réservés.</p>
+        <p>
+          <a href="regles/mentions-legales.html">Mentions légales</a> |
+          <a href="regles/cgv.html">Conditions Générales de Vente</a> |
+          <a href="regles/confidentialite.html">Politique de confidentialité</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    // menu burger
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("nav-links");
+
+    burger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      burger.classList.toggle("open");
+    });
+  </script>
 </html>
