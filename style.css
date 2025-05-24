@@ -218,7 +218,7 @@ section p {
 
 .quest-title {
   font-family: "Inter", sans-serif;
-  font-size: 4.5rem;
+  font-size: 6rem;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 80px;
@@ -653,46 +653,5 @@ footer .copyright {
     width: auto;
     display: block;
     max-width: none;
-  }
-  /* INFO */
-  .about-section {
-    grid-template-columns: 1fr;
-    padding: 60px 5%;
-    text-align: center;
-    justify-items: center; /* centre les éléments dans la grille */
-  }
-
-  .about-text {
-    max-width: 100%;
-  }
-
-  .animated-title {
-    font-size: 2.2rem;
-    margin: 0 auto 20px;
-    margin-left: -3rem;
-  }
-
-  .typewriter-gsap {
-    font-size: 1rem;
-    margin-left: -2rem;
-  }
-
-  .about-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-image img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .about-image h3 {
-    font-size: 1.2rem;
-  }
-
-  .slogan {
-    margin-left: -3rem;
   }
 }
