@@ -91,15 +91,57 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 40px;
 }
 
 nav a {
-  color: #fff;
+  position: relative;
+  color: white;
   text-decoration: none;
   font-weight: 500;
-  display: flex;
-  align-items: center;
+  font-size: 16px;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+/* Animation de la barre au hover */
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  transform: translateX(-50%);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ff6b35;
+}
+
+/* Effet supplémentaire : légère élévation */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 107, 53, 0.3);
+  transform: translateX(-50%);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+  box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+
+nav a:hover::after {
+  width: 120%;
 }
 
 .cart-icon img {
