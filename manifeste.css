@@ -215,7 +215,7 @@ nav a:hover::after {
 
 .slogan {
   margin-top: -1rem;
-  margin-left: 11rem;
+  margin-left: 0rem;
   font-style: italic;
   font-size: 1rem;
   color: #777;
