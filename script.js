@@ -7,8 +7,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const section = entry.target;
-
-      // anima titre principal
+      // ANIM TITRE PRINCIPALE
       setTimeout(() => {
         section.querySelector(".quest-title").classList.add("animate");
       }, 200);
