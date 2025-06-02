@@ -44,6 +44,7 @@ body {
   background: #fff;
   color: #000;
 }
+
 /* HEADER ET MENU BURGER */
 .burger {
   margin-right: 2rem;
@@ -106,7 +107,7 @@ header {
 }
 
 .logo img {
-  height: 60px;
+  height: 70px;
   width: auto;
 }
 
@@ -182,37 +183,60 @@ section p {
   text-align: left;
   padding-left: 55px;
 }
-.image-section {
-  position: relative;
-  display: inline-block;
-  margin-top: -9rem;
-}
-
-.image-section img {
-  display: block;
-  width: 100%;
-}
-.btn-contact {
-  margin-top: 21rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  color: black;
-  padding: 1rem 2rem;
-  border: 2px solid white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.btn-contact:hover {
-  background-color: transparent;
+.hero {
+  background-image: url("images/porshe\ V2.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 5%;
   color: white;
 }
 
+.hero-text {
+  margin-top: 10rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-text button {
+  margin-top: 30rem;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.hero button {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 15px 25px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.hero-text button:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  cursor: url("images/e418af07-1937-441a-9426-67b9c2ef2f0f.png"), pointer;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
 /* TEXTE INTRO */
 .quest-section {
   margin-top: -20rem;
@@ -268,8 +292,9 @@ section p {
 .quest-text {
   display: flex;
   justify-content: center;
-  font-family: "Just Me Again Down Here", cursive;
+  font-family: "Luxurious Script", cursive;
   font-weight: 400;
+  font-style: normal;
   font-size: 2.5rem;
   font-style: normal;
   line-height: 1.8;
@@ -394,8 +419,8 @@ section p {
 }
 
 .scroll-line {
-  padding-top: 20rem;
-  margin-top: -35rem;
+  pointer-events: none;
+  margin-top: -23rem;
   margin-bottom: -15rem;
   white-space: nowrap;
   overflow: hidden;
@@ -668,4 +693,29 @@ footer .copyright {
     max-width: none;
   }
   /* TEXTE QUI DEFILE */
+  .push-icon {
+    height: 40rem;
+    vertical-align: middle;
+  }
+
+  .scroll-line {
+    margin-top: -20rem;
+    margin-bottom: -15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 900;
+    font-family: "Inter", sans-serif;
+    font-size: 8rem;
+    width: 100%;
+  }
+
+  .scroll-line.left p,
+  .scroll-line.right p {
+    display: inline-block;
+    padding-left: 100%;
+  }
+
+  .scroll-line.left p {
+    animation: scroll-left 45s linear infinite;
+  }
 }
