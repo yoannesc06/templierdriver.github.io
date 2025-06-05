@@ -1,3 +1,11 @@
+// AVANCE SCROLL
+window.addEventListener("scroll", () => {
+  const scrollBar = document.querySelector(".scroll-progress-bar");
+  const totalHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (window.scrollY / totalHeight) * 100;
+  scrollBar.style.height = progress + "%";
+});
+
 // ID
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");

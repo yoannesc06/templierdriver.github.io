@@ -1,8 +1,15 @@
+// AVANCE SCROLL
+window.addEventListener("scroll", () => {
+  const scrollBar = document.querySelector(".scroll-progress-bar");
+  const totalHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (window.scrollY / totalHeight) * 100;
+  scrollBar.style.height = progress + "%";
+});
+
 const observerOptions = {
   threshold: 0.3,
   rootMargin: "0px 0px -100px 0px",
 };
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {

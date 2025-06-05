@@ -1,6 +1,18 @@
 html {
   scroll-behavior: smooth;
 }
+/* AVANCE SCROLL */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 0%;
+  background-color: black;
+  z-index: 9999;
+  transition: height 0.25s ease-out;
+}
+
 /* PRELOADER */
 #preloader {
   position: fixed;
@@ -377,7 +389,6 @@ section p {
 
 /* CONTENT */
 .content {
-  margin-bottom: 5rem;
   overflow: hidden;
   position: relative;
 }
