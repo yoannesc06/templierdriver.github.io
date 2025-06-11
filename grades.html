@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Templier Driver - Grades</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="grades.css" />
     <link
       rel="icon"
@@ -11,23 +13,28 @@
       type="image/svg+xml"
     />
   </head>
+
   <body>
+    <!-- Barre de progression scroll -->
     <div class="scroll-progress-bar"></div>
+
     <!-- HEADER -->
     <header>
-      <!-- HEADER -->
       <div class="header-inner">
+        <!-- Logo -->
         <a href="index.html" class="logo">
           <img
             src="images/LOGO TEMPLIER DRIVER.svg"
             alt="Templier Driver Logo"
           />
         </a>
+
         <!-- MENU BURGER -->
         <button class="burger" id="burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
-        <!-- NAV -->
+
+        <!-- NAVIGATION -->
         <nav id="nav-links">
           <a href="manifeste.html">Notre Manifeste</a>
           <a href="grades.html">Grades</a>
@@ -40,6 +47,7 @@
       </div>
     </header>
 
+    <!-- SECTION GRADES -->
     <section id="grades">
       <div class="text-card">
         <h2>Nos Grades</h2>
@@ -82,29 +90,39 @@
               <div class="card-back">Description 5</div>
             </div>
           </div>
+        </div>
+      </div>
     </section>
+
     <!-- FOOTER -->
     <hr class="footer-separator" />
     <footer>
       <div class="footer-container">
+        <!-- Logo & Réseaux sociaux -->
         <div class="footer-logo">
           <p><strong>Templier Driver</strong></p>
           <p>Qualité, Sécurité, Transparence.</p>
           <div class="social-icons">
-            <a href="https://www.instagram.com/" class="social-icon"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-tiktok"></i>
+            </a>
           </div>
         </div>
 
+        <!-- Contact -->
         <div class="footer-contact">
           <p><strong>Contact</strong></p>
           <p>templierdriver@gmail.com</p>
           <p>(+33) 6 56 58 58 59</p>
         </div>
 
+        <!-- Newsletter -->
         <div class="footer-news">
           <p><strong>S'inscrire</strong></p>
           <p>
@@ -118,6 +136,7 @@
         </div>
       </div>
 
+      <!-- Légal -->
       <div class="footer-bottom">
         <p>© 2025 Templier Driver. Tous droits réservés.</p>
         <p>
@@ -127,61 +146,63 @@
         </p>
       </div>
     </footer>
+
+    <!-- SCRIPT JS -->
+    <script>
+      // Animation cartes 3D
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach((card) => {
+        let isFlipped = false;
+        const inner = card.querySelector(".card-inner");
+
+        card.addEventListener("mousemove", (e) => {
+          if (card.classList.contains("flipped")) return;
+
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * 30;
+          const rotateY = ((x - centerX) / centerX) * -30;
+
+          inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+          if (!card.classList.contains("flipped")) {
+            inner.style.transform = `rotateX(0deg) rotateY(0deg)`;
+          }
+        });
+
+        card.addEventListener("click", () => {
+          card.classList.toggle("flipped");
+          if (card.classList.contains("flipped")) {
+            inner.style.transform = `rotateY(180deg)`;
+          } else {
+            inner.style.transform = `rotateX(0deg) rotateY(0deg)`;
+          }
+        });
+      });
+
+      // Menu burger
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("nav-links");
+
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        burger.classList.toggle("open");
+      });
+
+      // Barre de progression scroll
+      window.addEventListener("scroll", () => {
+        const scrollBar = document.querySelector(".scroll-progress-bar");
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = (window.scrollY / totalHeight) * 100;
+        scrollBar.style.height = progress + "%";
+      });
+    </script>
   </body>
-  <script>
-    // CARD 3D
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach((card) => {
-      let isFlipped = false;
-
-      const inner = card.querySelector(".card-inner");
-
-      card.addEventListener("mousemove", (e) => {
-        if (card.classList.contains("flipped")) return;
-
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = ((y - centerY) / centerY) * 30;
-        const rotateY = ((x - centerX) / centerX) * -30;
-
-        inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      });
-
-      card.addEventListener("mouseleave", () => {
-        if (!card.classList.contains("flipped")) {
-          inner.style.transform = `rotateX(0deg) rotateY(0deg)`;
-        }
-      });
-
-      card.addEventListener("click", () => {
-        card.classList.toggle("flipped");
-        if (card.classList.contains("flipped")) {
-          inner.style.transform = `rotateY(180deg)`;
-        } else {
-          inner.style.transform = `rotateX(0deg) rotateY(0deg)`;
-        }
-      });
-    });
-    // menu burger
-    const burger = document.getElementById("burger");
-    const nav = document.getElementById("nav-links");
-
-    burger.addEventListener("click", () => {
-      nav.classList.toggle("active");
-      burger.classList.toggle("open");
-    });
-    // AVANCE SCROLL
-    window.addEventListener("scroll", () => {
-  const scrollBar = document.querySelector(".scroll-progress-bar");
-  const totalHeight = document.body.scrollHeight - window.innerHeight;
-  const progress = (window.scrollY / totalHeight) * 100;
-  scrollBar.style.height = progress + "%";
-});
-
-  </script>
 </html>

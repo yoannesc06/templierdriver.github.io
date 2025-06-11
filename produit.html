@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,12 +17,14 @@
   </head>
   <body>
     <div class="scroll-progress-bar"></div>
+
+    <!-- HEADER -->
     <header>
       <div class="header-inner">
         <a href="index.html" class="logo">
           <img
             src="images/LOGO TEMPLIER DRIVER.svg"
-            alt="Templier Driver Logo"
+            alt="Logo Templier Driver"
           />
         </a>
 
@@ -36,18 +38,19 @@
           <a href="shop.html">Shop</a>
           <a href="contact.html">Contact</a>
           <a href="panier.html" class="cart-icon">
-            <img src="images/panier.png" alt="Panier" width="24" />
+            <img src="images/panier.png" alt="Icône panier" width="24" />
           </a>
         </nav>
       </div>
     </header>
-    <!-- PRODUIT -->
+
+    <!-- PAGE PRODUIT -->
     <main class="product-page">
       <div class="product-main">
         <div class="product-gallery">
           <div class="product-images">
-            <img id="product-front" src="" alt="Produit avant" />
-            <img id="product-back" src="" alt="Produit arrière" />
+            <img id="product-front" src="" alt="Image avant du produit" />
+            <img id="product-back" src="" alt="Image arrière du produit" />
           </div>
         </div>
 
@@ -57,7 +60,7 @@
           <hr class="footer-separator" />
 
           <div class="color-choice">
-            <label>Color</label>
+            <label>Couleur</label>
             <span id="product-color" class="color-dot"></span>
           </div>
 
@@ -72,51 +75,73 @@
           </div>
 
           <div class="form-line">
-            <label>Quantité </label>
+            <label>Quantité</label>
             <div class="quantity-buttons">
               <button id="decrease">-</button>
               <span id="quantity">1</span>
               <button id="increase">+</button>
             </div>
           </div>
-          <!-- AJOUTER AU PANIER -->
+
           <button id="add-to-cart" class="add-to-cart">
             AJOUTER AU PANIER
           </button>
         </div>
       </div>
+
       <hr class="footer-separator" />
+
       <!-- AUTRES PRODUITS -->
       <div class="other">
-        <h1>VOUS AIMEREZ PEUT-ETRE AUSSI</h1>
+        <h1>VOUS AIMEREZ PEUT-ÊTRE AUSSI</h1>
       </div>
 
       <section class="shop-section">
         <div class="products-container">
           <a href="produit.html?id=1" class="product-card" data-id="1">
             <div class="product-image">
-              <img src="images/Shop/T1B.png" alt="T-shirt 1" class="front" />
-              <img src="images/Shop/T1F.png" alt="T-shirt 1" class="back" />
+              <img
+                src="images/Shop/T1B.png"
+                alt="T-shirt bleu - dos"
+                class="front"
+              />
+              <img
+                src="images/Shop/T1F.png"
+                alt="T-shirt bleu - face"
+                class="back"
+              />
             </div>
             <h3>T-SHIRT TEMPLIER DRIVER</h3>
             <p class="price">30,00 €</p>
             <div class="color-dot" style="background-color: navy"></div>
           </a>
-          <!-- 2 -->
+
           <a href="produit.html?id=2" class="product-card" data-id="2">
             <div class="product-image">
-              <img src="images/Shop/T2B.png" alt="T-shirt 1" class="front" />
-              <img src="images/Shop/T2F.png" alt="T-shirt 1" class="back" />
+              <img
+                src="images/Shop/T2B.png"
+                alt="T-shirt noir - dos"
+                class="front"
+              />
+              <img
+                src="images/Shop/T2F.png"
+                alt="T-shirt noir - face"
+                class="back"
+              />
             </div>
             <h3>T-SHIRT TEMPLIER DRIVER</h3>
             <p class="price">30,00 €</p>
             <div class="color-dot" style="background-color: black"></div>
           </a>
-          <!-- 3 -->
+
           <a href="produit.html?id=3" class="product-card" data-id="3">
             <div class="product-image">
-              <img src="images/Shop/mug1.png" alt="T-shirt 1" class="front" />
-              <img src="images/Shop/mug2.png" alt="T-shirt 1" class="back" />
+              <img
+                src="images/Shop/mug1.png"
+                alt="Mug - face 1"
+                class="front"
+              />
+              <img src="images/Shop/mug2.png" alt="Mug - face 2" class="back" />
             </div>
             <h3>MUG TEMPLIER DRIVER</h3>
             <p class="price">15,00 €</p>
@@ -125,6 +150,7 @@
         </div>
       </section>
     </main>
+
     <!-- FOOTER -->
     <hr class="footer-separator" />
     <footer>
@@ -170,28 +196,45 @@
       </div>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="product.js"></script>
+
     <script>
+      // Scroll progress
+      window.addEventListener("scroll", () => {
+        const scrollBar = document.querySelector(".scroll-progress-bar");
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = (window.scrollY / totalHeight) * 100;
+        scrollBar.style.height = progress + "%";
+      });
+
+      // Apparition "autres produits"
+      const otherElement = document.querySelector(".other");
       function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return rect.top < window.innerHeight && rect.bottom >= 0;
       }
 
-      const otherElement = document.querySelector(".other");
-
       function handleScroll() {
         if (isInViewport(otherElement)) {
           otherElement.classList.add("show");
-          window.removeEventListener("scroll", handleScroll); // Une seule fois
+          window.removeEventListener("scroll", handleScroll);
         }
       }
 
       window.addEventListener("scroll", handleScroll);
-      // Appelle au chargement aussi au cas où l'élément est déjà visible
       handleScroll();
+
+      // Burger menu
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("nav-links");
+      burger?.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        burger.classList.toggle("open");
+      });
     </script>
+
     <!-- HUBSPOT -->
-    <!-- Start of HubSpot Embed Code -->
     <script
       type="text/javascript"
       id="hs-script-loader"
@@ -199,6 +242,5 @@
       defer
       src="//js-eu1.hs-scripts.com/146085103.js"
     ></script>
-    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

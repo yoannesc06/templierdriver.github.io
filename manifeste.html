@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,22 +11,24 @@
       type="image/svg+xml"
     />
   </head>
+
   <body>
     <div class="scroll-progress-bar"></div>
+
+    <!-- HEADER -->
     <header>
-      <!-- HEADER -->
       <div class="header-inner">
         <a href="index.html" class="logo">
           <img
             src="images/LOGO TEMPLIER DRIVER.svg"
-            alt="Templier Driver Logo"
+            alt="Logo Templier Driver"
           />
         </a>
-        <!-- MENU BURGER -->
+
         <button class="burger" id="burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
-        <!-- NAV -->
+
         <nav id="nav-links">
           <a href="manifeste.html">Notre Manifeste</a>
           <a href="grades.html">Grades</a>
@@ -38,28 +40,32 @@
         </nav>
       </div>
     </header>
-    <!-- INFO -->
+
+    <!-- MANIFESTE -->
     <section class="about-section">
       <div class="about-text">
         <h2 class="animated-title">MANIFESTE TEMPLIER DRIVER</h2>
+
         <p class="typewriter-gsap">
           Nous sommes les héritiers d'un temps où chaque geste avait du sens, où
           l'honneur guidait les pas, où le dépassement de soi était une
-          discipline sacrée.<br />
-          <br />Nous ne roulons pas pour la gloire ni pour la reconnaissance :
-          <br />nous roulons pour la vérité brute du pilotage, pour la liberté
-          d'ouvrir la voie, pour l'ivresse pure de la maîtrise.<br />
-          <br />Templier Driver n'est pas une marque.<br />
+          discipline sacrée.<br /><br />
+          Nous ne roulons pas pour la gloire ni pour la reconnaissance :<br />
+          nous roulons pour la vérité brute du pilotage, pour la liberté
+          d'ouvrir la voie, pour l'ivresse pure de la maîtrise.<br /><br />
+          Templier Driver n'est pas une marque.<br />
           C'est un Ordre, un esprit, une signature.<br />
           Un ordre secret et ouvert, réservé à ceux qui vivent avec la passion
-          pour serment et la vitesse comme rite initiatique.<br />
-          <br />Un sceau rare. Silencieux.<br />
+          pour serment et la vitesse comme rite initiatique.<br /><br />
+          Un sceau rare. Silencieux.<br />
           Porté par celles et ceux qui pilotent avec précision, exigence,
           élégance.<br />
           Ici, chaque virage est un serment.<br />
           Chaque ligne droite, une déclaration de liberté.
         </p>
+
         <hr />
+
         <p class="typewriter-gsap">
           Nous refusons le bruit, le banal, le vite oublié.<br />
           Nous choisissons la rareté, le style, la trace.<br />
@@ -68,7 +74,9 @@
           Dans un monde pressé, nous valorisons la maîtrise.<br />
           Dans un monde sans cap, nous gardons le nôtre.
         </p>
+
         <hr />
+
         <p class="typewriter-gsap">
           Notre emblème ne s'achète pas.<br />
           Il se mérite.<br />
@@ -80,12 +88,14 @@
           et mer.
         </p>
       </div>
+
       <div class="about-image">
         <img src="images/photo profil.png" alt="Yann Barthes" />
         <h3>Yann Barthes</h3>
         <p class="slogan">"Just trust in you"</p>
       </div>
     </section>
+
     <!-- FOOTER -->
     <hr class="footer-separator" />
     <footer>
@@ -130,32 +140,34 @@
         </p>
       </div>
     </footer>
-  </body>
-  <script>
-    // menu burger
-    const burger = document.getElementById("burger");
-    const nav = document.getElementById("nav-links");
 
-    burger.addEventListener("click", () => {
-      nav.classList.toggle("active");
-      burger.classList.toggle("open");
-    });
-    // AVANCE SCROLL
-    window.addEventListener("scroll", () => {
-      const scrollBar = document.querySelector(".scroll-progress-bar");
-      const totalHeight = document.body.scrollHeight - window.innerHeight;
-      const progress = (window.scrollY / totalHeight) * 100;
-      scrollBar.style.height = progress + "%";
-    });
-  </script>
-  <!-- HUBSPOT -->
-  <!-- Start of HubSpot Embed Code -->
-  <script
-    type="text/javascript"
-    id="hs-script-loader"
-    async
-    defer
-    src="//js-eu1.hs-scripts.com/146085103.js"
-  ></script>
-  <!-- End of HubSpot Embed Code -->
+    <!-- SCRIPTS -->
+    <script>
+      // Burger menu
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("nav-links");
+
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        burger.classList.toggle("open");
+      });
+
+      // Scroll progress bar
+      window.addEventListener("scroll", () => {
+        const scrollBar = document.querySelector(".scroll-progress-bar");
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = (window.scrollY / totalHeight) * 100;
+        scrollBar.style.height = progress + "%";
+      });
+    </script>
+
+    <!-- HUBSPOT -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js-eu1.hs-scripts.com/146085103.js"
+    ></script>
+  </body>
 </html>

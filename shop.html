@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,6 +17,8 @@
   </head>
   <body>
     <div class="scroll-progress-bar"></div>
+
+    <!-- HEADER -->
     <header>
       <div class="header-inner">
         <a href="index.html" class="logo">
@@ -25,11 +27,15 @@
             alt="Templier Driver Logo"
           />
         </a>
-          <!-- MENU BURGER -->
+
+        <!-- MENU BURGER -->
         <button class="burger" id="burger" aria-label="Menu">
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-        <!-- NAV -->
+
+        <!-- NAVIGATION -->
         <nav id="nav-links">
           <a href="manifeste.html">Notre Manifeste</a>
           <a href="grades.html">Grades</a>
@@ -39,35 +45,63 @@
             <img src="images/panier.png" alt="Panier" width="24" />
           </a>
         </nav>
+      </div>
     </header>
-    <!-- SHOP -->
-    <!-- 1 -->
+
+    <!-- SHOP SECTION -->
     <section class="shop-section">
       <div class="products-container">
+        <!-- Produit 1 -->
         <a href="produit.html?id=1" class="product-card" data-id="1">
           <div class="product-image">
-            <img src="images/Shop/T1B.png" alt="T-shirt 1" class="front" />
-            <img src="images/Shop/T1F.png" alt="T-shirt 1" class="back" />
+            <img
+              src="images/Shop/T1B.png"
+              alt="T-shirt Navy - Face"
+              class="front"
+            />
+            <img
+              src="images/Shop/T1F.png"
+              alt="T-shirt Navy - Dos"
+              class="back"
+            />
           </div>
           <h3>T-SHIRT TEMPLIER DRIVER</h3>
           <p class="price">30,00 €</p>
           <div class="color-dot" style="background-color: navy"></div>
         </a>
-        <!-- 2 -->
+
+        <!-- Produit 2 -->
         <a href="produit.html?id=2" class="product-card" data-id="2">
           <div class="product-image">
-            <img src="images/Shop/T2B.png" alt="T-shirt 1" class="front" />
-            <img src="images/Shop/T2F.png" alt="T-shirt 1" class="back" />
+            <img
+              src="images/Shop/T2B.png"
+              alt="T-shirt Noir - Face"
+              class="front"
+            />
+            <img
+              src="images/Shop/T2F.png"
+              alt="T-shirt Noir - Dos"
+              class="back"
+            />
           </div>
           <h3>T-SHIRT TEMPLIER DRIVER</h3>
           <p class="price">30,00 €</p>
           <div class="color-dot" style="background-color: black"></div>
         </a>
-        <!-- 3 -->
+
+        <!-- Produit 3 -->
         <a href="produit.html?id=3" class="product-card" data-id="3">
           <div class="product-image">
-            <img src="images/Shop/mug1.png" alt="T-shirt 1" class="front" />
-            <img src="images/Shop/mug2.png" alt="T-shirt 1" class="back" />
+            <img
+              src="images/Shop/mug1.png"
+              alt="Mug Templier - Face"
+              class="front"
+            />
+            <img
+              src="images/Shop/mug2.png"
+              alt="Mug Templier - Dos"
+              class="back"
+            />
           </div>
           <h3>MUG TEMPLIER DRIVER</h3>
           <p class="price">15,00 €</p>
@@ -120,7 +154,17 @@
         </p>
       </div>
     </footer>
+
+    <!-- JS -->
     <script src="shop.js" defer></script>
+
     <!-- HUBSPOT -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js-eu1.hs-scripts.com/146085103.js"
+    ></script>
   </body>
 </html>

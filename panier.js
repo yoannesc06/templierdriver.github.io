@@ -1,3 +1,11 @@
+// MENU BURGER
+const burger = document.getElementById("burger");
+const nav = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  burger.classList.toggle("open");
+});
 document.addEventListener("DOMContentLoaded", () => {
   const produitsContainer = document.querySelector(".panier-produits");
   const totalElement = document.querySelector("#total");

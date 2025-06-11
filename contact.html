@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conatct - Templier Driver</title>
+    <title>Contact - Templier Driver</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       href="images/LOGO TEMPLIER DRIVER.svg"
       type="image/svg+xml"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
   </head>
+
   <body>
-    
-    <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
+    <!-- Fond animé Particles.js -->
+    <div
+      id="particles-js"
+      style="position: fixed; width: 100%; height: 100%; z-index: -1"
+    ></div>
+
+    <!-- HEADER -->
     <header>
       <div class="header-inner">
         <a href="index.html" class="logo">
@@ -26,11 +36,13 @@
             alt="Templier Driver Logo"
           />
         </a>
+
         <!-- MENU BURGER -->
         <button class="burger" id="burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
-        <!-- NAV -->
+
+        <!-- NAVIGATION -->
         <nav id="nav-links">
           <a href="manifeste.html">Notre Manifeste</a>
           <a href="grades.html">Grades</a>
@@ -42,87 +54,100 @@
         </nav>
       </div>
     </header>
-    <!-- CONTACT -->
+
+    <!-- SECTION CONTACT -->
     <section class="contact-section">
       <div class="contact-container">
-        <!-- Formulaire à gauche -->
         <div class="mac-window">
           <div class="mac-header">
             <span class="mac-dot red"></span>
             <span class="mac-dot yellow"></span>
             <span class="mac-dot green"></span>
           </div>
+
           <form class="formulaire">
+            <!-- Civilité -->
             <div class="form-group row">
-  <label for="civilite" style="width: 100%;">Civilité</label>
-  <select name="civilite" id="civilite" required>
-    <option value="">Civilité</option>
-    <option value="monsieur">Monsieur ♂</option>
-    <option value="madame">Madame ♀</option>
-  </select>
-</div>
+              <label for="civilite" style="width: 100%">Civilité</label>
+              <select name="civilite" id="civilite" required>
+                <option value="">Civilité</option>
+                <option value="monsieur">Monsieur ♂</option>
+                <option value="madame">Madame ♀</option>
+              </select>
+            </div>
 
-  <div class="row">
-    <input type="text" placeholder="Prenom" required />
-    <input type="text" placeholder="Nom" required />
-  </div>
-  <div class="form-group row">
-  <label for="birthdate" style="width: 100%;">Date de naissance</label>
+            <!-- Prénom / Nom -->
+            <div class="row">
+              <input type="text" placeholder="Prenom" required />
+              <input type="text" placeholder="Nom" required />
+            </div>
 
-  <select name="jour" required>
-    <option value="">Jour</option>
-    <!-- Jours 1 à 31 -->
-    <script>
-      for (let i = 1; i <= 31; i++) {
-        document.write(`<option value="${i}">${i}</option>`);
-      }
-    </script>
-  </select>
+            <!-- Date de naissance -->
+            <div class="form-group row">
+              <label for="birthdate" style="width: 100%"
+                >Date de naissance</label
+              >
 
-  <select name="mois" required>
-    <option value="">Mois</option>
-    <option value="1">Janvier</option>
-    <option value="2">Février</option>
-    <option value="3">Mars</option>
-    <option value="4">Avril</option>
-    <option value="5">Mai</option>
-    <option value="6">Juin</option>
-    <option value="7">Juillet</option>
-    <option value="8">Août</option>
-    <option value="9">Septembre</option>
-    <option value="10">Octobre</option>
-    <option value="11">Novembre</option>
-    <option value="12">Décembre</option>
-  </select>
+              <select name="jour" required>
+                <option value="">Jour</option>
+                <!-- Jours 1 à 31 -->
+                <script>
+                  for (let i = 1; i <= 31; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                  }
+                </script>
+              </select>
 
-  <select name="annee" required>
-    <option value="">Année</option>
-    <script>
-      const currentYear = new Date().getFullYear();
-      for (let i = currentYear; i >= 1900; i--) {
-        document.write(`<option value="${i}">${i}</option>`);
-      }
-    </script>
-  </select>
-</div>
-  <input type="email" placeholder="E-mail" required />
-  <input type="tel" placeholder="Portable" required />
-  <input type="text" placeholder="Adresse postale" required />
-  
+              <select name="mois" required>
+                <option value="">Mois</option>
+                <option value="1">Janvier</option>
+                <option value="2">Février</option>
+                <option value="3">Mars</option>
+                <option value="4">Avril</option>
+                <option value="5">Mai</option>
+                <option value="6">Juin</option>
+                <option value="7">Juillet</option>
+                <option value="8">Août</option>
+                <option value="9">Septembre</option>
+                <option value="10">Octobre</option>
+                <option value="11">Novembre</option>
+                <option value="12">Décembre</option>
+              </select>
 
-  <div class="row">
-    <input type="text" placeholder="Ville" required />
-    <input type="text" placeholder="Code postal" required />
-  </div>
-  <button type="submit">Envoyer</button>
-</form>
+              <select name="annee" required>
+                <option value="">Année</option>
+                <script>
+                  const currentYear = new Date().getFullYear();
+                  for (let i = currentYear; i >= 1900; i--) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                  }
+                </script>
+              </select>
+            </div>
 
+            <!-- Email, Téléphone, Adresse -->
+            <input type="email" placeholder="E-mail" required />
+            <input type="tel" placeholder="Portable" required />
+            <input type="text" placeholder="Adresse postale" required />
+
+            <!-- Ville / Code postal -->
+            <div class="row">
+              <input type="text" placeholder="Ville" required />
+              <input type="text" placeholder="Code postal" required />
+            </div>
+
+            <!-- Bouton envoyer -->
+            <button type="submit">Envoyer</button>
+          </form>
         </div>
+      </div>
     </section>
+
     <!-- FOOTER -->
     <hr class="footer-separator" />
     <footer>
       <div class="footer-container">
+        <!-- Logo et social -->
         <div class="footer-logo">
           <p><strong>Templier Driver</strong></p>
           <p>Qualité, Sécurité, Transparence.</p>
@@ -135,12 +160,14 @@
           </div>
         </div>
 
+        <!-- Contact -->
         <div class="footer-contact">
           <p><strong>Contact</strong></p>
           <p>templierdriver@gmail.com</p>
           <p>(+33) 6 56 58 58 59</p>
         </div>
 
+        <!-- Newsletter -->
         <div class="footer-news">
           <p><strong>S'inscrire</strong></p>
           <p>
@@ -154,6 +181,7 @@
         </div>
       </div>
 
+      <!-- Mentions légales / CGV -->
       <div class="footer-bottom">
         <p>© 2025 Templier Driver. Tous droits réservés.</p>
         <p>
@@ -163,27 +191,34 @@
         </p>
       </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="contact.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script>
-  particlesJS("particles-js", {
-    particles: {
-      number: { value: 40, density: { enable: true, value_area: 800 } },
-      color: { value: "#ffffff" },
-      opacity: { value: 0.2 },
-      size: { value: 2 },
-      line_linked: { enable: false },
-      move: { enable: true, speed: 0.6 }
-    },
-    interactivity: {
-      events: { onhover: { enable: true, mode: "repulse" } }
-    },
-    retina_detect: true
-  });
-</script>
-<!-- HUBSPOT -->
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/146085103.js"></script>
-<!-- End of HubSpot Embed Code -->
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 40, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          opacity: { value: 0.2 },
+          size: { value: 2 },
+          line_linked: { enable: false },
+          move: { enable: true, speed: 0.6 },
+        },
+        interactivity: {
+          events: { onhover: { enable: true, mode: "repulse" } },
+        },
+        retina_detect: true,
+      });
+    </script>
+
+    <!-- HUBSPOT -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js-eu1.hs-scripts.com/146085103.js"
+    ></script>
   </body>
 </html>
