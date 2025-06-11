@@ -179,18 +179,15 @@
 
     <script src="script.js" defer></script>
     <script>
+      // PRELOADER
       const preloader = document.getElementById("preloader");
       const loader = document.getElementById("loader-percent");
-
-      // Vérifie si c’est le premier chargement de la session
       if (!sessionStorage.getItem("visited")) {
         let percent = 0;
         sessionStorage.setItem("visited", "true");
-
         const interval = setInterval(() => {
           percent++;
           loader.textContent = percent + "%";
-
           if (percent >= 100) {
             clearInterval(interval);
             gsap.to(preloader, {
@@ -203,25 +200,20 @@
           }
         }, 20);
       } else {
-        // Si déjà visité dans la session, on cache direct le preloader
         preloader.style.display = "none";
       }
       gsap.registerPlugin(ScrollTrigger);
-
       window.addEventListener("DOMContentLoaded", () => {
         const paragraph = document.querySelector(".typewriter-gsap");
         if (!paragraph) return;
-
         const text = paragraph.textContent.trim();
         paragraph.textContent = "";
-
         const letters = text.split("").map((letter) => {
           const span = document.createElement("span");
           span.textContent = letter;
           paragraph.appendChild(span);
           return span;
         });
-
         gsap.to(letters, {
           scrollTrigger: {
             trigger: paragraph,
@@ -234,5 +226,15 @@
         });
       });
     </script>
+    <!-- HUBSPOT -->
+    <!-- Start of HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js-eu1.hs-scripts.com/146085103.js"
+    ></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>
