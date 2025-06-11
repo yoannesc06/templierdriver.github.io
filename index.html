@@ -4,40 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Templier Driver</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Plugins -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MorphSVGPlugin.min.js"></script>
+
+    <!-- Favicon -->
     <link
       rel="icon"
       href="images/LOGO TEMPLIER DRIVER.svg"
       type="image/svg+xml"
     />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Scripts (externes) -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MorphSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
+
   <body>
+    <!-- Barre de progression scroll -->
     <div class="scroll-progress-bar"></div>
+
     <header>
-      <!-- PRELOADER -->
+      <!-- Preloader -->
       <div id="preloader">
         <div class="loader-content">
           <img
@@ -48,7 +57,8 @@
           <span id="loader-percent">0%</span>
         </div>
       </div>
-      <!-- HEADER -->
+
+      <!-- Header principal -->
       <div class="header-inner">
         <a href="index.html" class="logo">
           <img
@@ -56,11 +66,13 @@
             alt="Templier Driver Logo"
           />
         </a>
-        <!-- MENU BURGER -->
+
+        <!-- Menu Burger -->
         <button class="burger" id="burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
-        <!-- NAV -->
+
+        <!-- Navigation -->
         <nav id="nav-links">
           <a href="manifeste.html">Notre Manifeste</a>
           <a href="grades.html">Grades</a>
@@ -72,6 +84,8 @@
         </nav>
       </div>
     </header>
+
+    <!-- Section Héros -->
     <section class="hero">
       <div class="hero-text">
         <div class="btn-wrapper">
@@ -81,7 +95,8 @@
         </div>
       </div>
     </section>
-    <!-- TEXTE QUI DEFILE -->
+
+    <!-- Texte défilant -->
     <div class="content-scroll">
       <div class="scroll-line left">
         <p>
@@ -89,27 +104,13 @@
           <img src="images/damier.jpg" alt="push" class="push-icon" />
           PUSH, PUSH, PUSH
           <img src="images/damier.jpg" alt="push" class="push-icon" />
-          PUSH, PUSH, PUSH
-          <img src="images/damier.jpg" alt="push" class="push-icon" />
-          PUSH, PUSH, PUSH
-          <img src="images/damier.jpg" alt="push" class="push-icon" />
-          PUSH, PUSH, PUSH
-          <img src="images/damier.jpg" alt="push" class="push-icon" />
-          PUSH, PUSH, PUSH
-          <img src="images/damier.jpg" alt="push" class="push-icon" />
-          PUSH, PUSH, PUSH
-          <img src="images/damier.jpg" alt="push" class="push-icon" />
-          PUSH, PUSH, PUSH
-          <img src="images/damier.jpg" alt="push" class="push-icon" />
-          PUSH, PUSH, PUSH
-          <img src="images/damier.jpg" alt="push" class="push-icon" />
-          PUSH, PUSH, PUSH
-          <img src="images/damier.jpg" alt="push" class="push-icon" />
+          <!-- ...répété... -->
           PUSH, PUSH, PUSH
         </p>
       </div>
     </div>
-    <!--TEXT INTRO -->
+
+    <!-- Section intro -->
     <section class="quest-section" id="quest-section">
       <div class="quest-container">
         <h1 class="quest-title">Notre quête suprême :<br />l'état de flow</h1>
@@ -119,7 +120,8 @@
         <p class="quest-text">Forgé pour le futur.</p>
       </div>
     </section>
-    <!-- CONTENT -->
+
+    <!-- Section contenu principal -->
     <section class="content">
       <div class="content-top" id="content-top">
         <div class="content-boxes-scroll">
@@ -132,10 +134,11 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <hr class="footer-separator" />
     <footer>
       <div class="footer-container">
+        <!-- Bloc logo -->
         <div class="footer-logo">
           <p><strong>Templier Driver</strong></p>
           <p>Qualité, Sécurité, Transparence.</p>
@@ -148,12 +151,14 @@
           </div>
         </div>
 
+        <!-- Bloc contact -->
         <div class="footer-contact">
           <p><strong>Contact</strong></p>
           <p>templierdriver@gmail.com</p>
           <p>(+33) 6 56 58 58 59</p>
         </div>
 
+        <!-- Bloc newsletter -->
         <div class="footer-news">
           <p><strong>S'inscrire</strong></p>
           <p>
@@ -177,11 +182,14 @@
       </div>
     </footer>
 
+    <!-- Script principal -->
     <script src="script.js" defer></script>
+
+    <!-- Script JS Inline : Preloader + ScrollTrigger -->
     <script>
-      // PRELOADER
       const preloader = document.getElementById("preloader");
       const loader = document.getElementById("loader-percent");
+
       if (!sessionStorage.getItem("visited")) {
         let percent = 0;
         sessionStorage.setItem("visited", "true");
@@ -202,10 +210,13 @@
       } else {
         preloader.style.display = "none";
       }
+
       gsap.registerPlugin(ScrollTrigger);
+
       window.addEventListener("DOMContentLoaded", () => {
         const paragraph = document.querySelector(".typewriter-gsap");
         if (!paragraph) return;
+
         const text = paragraph.textContent.trim();
         paragraph.textContent = "";
         const letters = text.split("").map((letter) => {
@@ -214,6 +225,7 @@
           paragraph.appendChild(span);
           return span;
         });
+
         gsap.to(letters, {
           scrollTrigger: {
             trigger: paragraph,
@@ -226,8 +238,8 @@
         });
       });
     </script>
-    <!-- HUBSPOT -->
-    <!-- Start of HubSpot Embed Code -->
+
+    <!-- HUBSPOT Embed -->
     <script
       type="text/javascript"
       id="hs-script-loader"
@@ -235,6 +247,5 @@
       defer
       src="//js-eu1.hs-scripts.com/146085103.js"
     ></script>
-    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

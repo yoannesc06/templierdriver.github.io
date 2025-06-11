@@ -4,15 +4,140 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mentions légales</title>
-    <link
-      rel="icon"
-      href="images/LOGO TEMPLIER DRIVER.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="images/LOGO TEMPLIER DRIVER.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="regles.css" />
   </head>
+
   <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header-inner">
+        <a href="../index.html" class="logo">
+          <img src="images/LOGO TEMPLIER DRIVER.svg" alt="Templier Driver Logo" />
+        </a>
+
+        <!-- MENU BURGER -->
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- NAVIGATION -->
+        <nav id="nav-links">
+          <a href="manifeste.html">Notre Manifeste</a>
+          <a href="grades.html">Grades</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+          <a href="panier.html" class="cart-icon">
+            <img src="images/panier.png" alt="Panier" width="24" />
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENU -->
+    <section class="about-section">
+      <div class="about-text">
+        <h2 class="animated-title">Mentions légales</h2>
+
+        <p class="typewriter-gsap">
+          En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, 
+          il est précisé aux utilisateurs du site templierdriver.fr
+
+          <br /><br />
+          Templier Driver, dont le siège social est situé à Toulouse au 7 bis rue du pont saint pierre 31300 Toulouse, 
+          et enregistrée au Registre du Commerce et des Sociétés de Nanterre sous le numéro ……….
+          Le site a fait l’objet d’une déclaration à la CNIL sous le numéro ………
+
+          <br /><hr /><br />
+
+          Propriétaire : BARON RACING – 90175909200017 <br />
+          Créateur : BARON RACING – 90175909200017 <br />
+          Responsable publication : Monsieur Yann BARTHES – direction@e-vutech.fr 
+          Le responsable publication est une personne physique ou une personne morale. <br />
+          Hébergeur : Infomaniak <br />
+          Garantie financière : …… <br />
+          Le site est conçu et réalisé par : ESCOBAR Yoann <br />
+          Hébergeur : OVH cloud <br />
+          Contact Equipe : ......... <br />
+          Show Room : …… <br />
+
+          <hr />
+        </p>
+
+        <h1>CONDITIONS PARTICULIERES</h1>
+
+        <h3>Droits réservés :</h3>
+        <p class="typewriter-gsap">
+          Toute reproduction, représentation, utilisation ou modification, par quelque procédé que ce soit et 
+          sur quelque support que ce soit, de tout ou partie du site, de tout ou partie des différentes œuvres 
+          qui le composent, sans en avoir obtenu l’autorisation préalable de Barnstormer est strictement interdite 
+          et constitue un délit de contrefaçon.
+        </p>
+
+        <h3>Politique de confidentialité :</h3>
+        <p class="typewriter-gsap">
+          En aucun cas, les données recueillies sur les sites www.templierdriver.fr ne seront cédées ou vendues à des tiers. 
+          Aucune adresse email ne sera transmise à des tiers y compris à nos partenaires sauf avec l’accord écrit des intéressés.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <hr class="footer-separator" />
+
+    <footer>
+      <div class="footer-container">
+
+        <div class="footer-logo">
+          <p><strong>Templier Driver</strong></p>
+          <p>Qualité, Sécurité, Transparence.</p>
+
+          <div class="social-icons">
+            <a href="https://www.instagram.com/" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <p><strong>Contact</strong></p>
+          <p>templierdriver@gmail.com</p>
+          <p>(+33) 6 56 58 58 59</p>
+        </div>
+
+        <div class="footer-news">
+          <p><strong>S'inscrire</strong></p>
+          <p>Inscrivez-vous à notre newsletter pour être informé de nos dernières actualités.</p>
+
+          <div class="newsletter-form">
+            <input type="email" placeholder="E-mail" />
+            <button>→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Templier Driver. Tous droits réservés.</p>
+        <p>
+          <a href="mentions-legales.html">Mentions légales</a> |
+          <a href="cgv.html">Conditions Générales de Vente</a> |
+          <a href="confidentialite.html">Politique de confidentialité</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="regles.js"></script>
+
     <!-- HUBSPOT -->
-    <!-- Start of HubSpot Embed Code -->
     <script
       type="text/javascript"
       id="hs-script-loader"
@@ -20,6 +145,5 @@
       defer
       src="//js-eu1.hs-scripts.com/146085103.js"
     ></script>
-    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

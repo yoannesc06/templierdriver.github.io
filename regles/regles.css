@@ -1,0 +1,450 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* HEADER ET MENU BURGER */
+.burger {
+  margin-right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10001;
+  justify-content: center;
+  gap: 6px;
+}
+
+.burger span {
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* CROIX quand ouvert */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+  margin-left: 5%;
+  margin-top: 30%;
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+  margin-left: 5%;
+  margin-bottom: 10%;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+/* Animation de la barre au hover */
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  transform: translateX(-50%);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ff6b35;
+}
+
+/* Effet supplémentaire : légère élévation */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 107, 53, 0.3);
+  transform: translateX(-50%);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+  box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+
+nav a:hover::after {
+  width: 120%;
+}
+.cart-icon img {
+  vertical-align: middle;
+}
+
+.cart-icon {
+  margin-left: 0, 5rem;
+  cursor: pointer;
+}
+/* INFO */
+.about-section {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 80px 10%;
+  background: white;
+  font-family: "Segoe UI", sans-serif;
+  gap: 50px;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.animated-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.animated-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+.footer-separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+}
+
+footer {
+  background-color: white;
+  padding: 40px 60px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #111;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo,
+.footer-contact,
+.footer-news {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo p:first-child {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-logo .social-icons a {
+  margin-right: 12px;
+  display: inline-block;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.footer-logo .social-icons a:hover {
+  color: #555;
+}
+
+.footer-contact p,
+.footer-news p {
+  margin: 6px 0;
+}
+
+.footer-news input[type="email"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.footer-news .newsletter-form {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.footer-news button {
+  padding: 6px 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #555;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer-bottom a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .body {
+    overflow-x: hidden;
+  }
+  /* HEADER */
+  .burger {
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  nav#nav-links {
+    box-sizing: border-box;
+    padding: 4rem 1.5rem 0;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    padding-top: 4rem;
+    transition: left 0.4s ease;
+    z-index: 10000;
+  }
+
+  nav#nav-links.active {
+    left: 0;
+  }
+
+  nav#nav-links a {
+    margin-left: 2rem;
+    color: white;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid #333;
+    text-align: left;
+  }
+  /* IMAGE HOMEPAGE  */
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+  .hero {
+    background-image: url("images/porshe-mobile.png");
+    background-size: auto;
+    background-position: center;
+    height: 100vh;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 5%;
+    color: white;
+  }
+  .hero-text button {
+    margin-top: 32rem;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  /* TEXTE INTRO */
+  .quest-section {
+    margin-top: -25rem;
+    margin-bottom: 5rem;
+    padding: 80px 5%;
+    min-height: auto;
+  }
+
+  .quest-container {
+    margin-top: 0;
+    padding: 0 10px;
+  }
+
+  .quest-title {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+  }
+
+  .quest-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
+
+  .quest-text {
+    flex-direction: column;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .quest-text p {
+    font-size: 8rem;
+  }
+
+  .quest-text::after {
+    width: 40%;
+  }
+  /* CONTENT */
+  body,
+  .content {
+    padding: 0;
+    margin: 0;
+  }
+
+  .content {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .content-top h2 {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    margin-right: 20rem;
+    padding-left: 5rem;
+  }
+  .scroll-line {
+    font-size: 4rem;
+  }
+  .content-boxes-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+  }
+
+  .panorama-img {
+    height: 800px;
+    width: auto;
+    display: block;
+    max-width: none;
+  }
+  /* TEXTE QUI DEFILE */
+  .push-icon {
+    height: 40rem;
+    vertical-align: middle;
+  }
+
+  .scroll-line {
+    margin-top: -20rem;
+    margin-bottom: -15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 900;
+    font-family: "Inter", sans-serif;
+    font-size: 8rem;
+    width: 100%;
+  }
+
+  .scroll-line.left p,
+  .scroll-line.right p {
+    display: inline-block;
+    padding-left: 100%;
+  }
+
+  .scroll-line.left p {
+    animation: scroll-left 45s linear infinite;
+  }
+}
