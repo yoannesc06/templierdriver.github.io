@@ -49,92 +49,16 @@
     </header>
 
     <!-- SECTION CONTACT -->
-    <section class="contact-section">
-      <div class="contact-container">
-        <div class="mac-window">
-          <div class="mac-header">
-            <span class="mac-dot red"></span>
-            <span class="mac-dot yellow"></span>
-            <span class="mac-dot green"></span>
-          </div>
-
-          <form class="formulaire">
-            <!-- Civilité -->
-            <div class="form-group row">
-              <label for="civilite" style="width: 100%">Civilité</label>
-              <select name="civilite" id="civilite" required>
-                <option value="">Civilité</option>
-                <option value="monsieur">Monsieur ♂</option>
-                <option value="madame">Madame ♀</option>
-              </select>
-            </div>
-
-            <!-- Prénom / Nom -->
-            <div class="row">
-              <input type="text" placeholder="Prenom" required />
-              <input type="text" placeholder="Nom" required />
-            </div>
-
-            <!-- Date de naissance -->
-            <div class="form-group row">
-              <label for="birthdate" style="width: 100%"
-                >Date de naissance</label
-              >
-
-              <select name="jour" required>
-                <option value="">Jour</option>
-                <!-- Jours 1 à 31 -->
-                <script>
-                  for (let i = 1; i <= 31; i++) {
-                    document.write(`<option value="${i}">${i}</option>`);
-                  }
-                </script>
-              </select>
-
-              <select name="mois" required>
-                <option value="">Mois</option>
-                <option value="1">Janvier</option>
-                <option value="2">Février</option>
-                <option value="3">Mars</option>
-                <option value="4">Avril</option>
-                <option value="5">Mai</option>
-                <option value="6">Juin</option>
-                <option value="7">Juillet</option>
-                <option value="8">Août</option>
-                <option value="9">Septembre</option>
-                <option value="10">Octobre</option>
-                <option value="11">Novembre</option>
-                <option value="12">Décembre</option>
-              </select>
-
-              <select name="annee" required>
-                <option value="">Année</option>
-                <script>
-                  const currentYear = new Date().getFullYear();
-                  for (let i = currentYear; i >= 1900; i--) {
-                    document.write(`<option value="${i}">${i}</option>`);
-                  }
-                </script>
-              </select>
-            </div>
-
-            <!-- Email, Téléphone, Adresse -->
-            <input type="email" placeholder="E-mail" required />
-            <input type="tel" placeholder="Portable" required />
-            <input type="text" placeholder="Adresse postale" required />
-
-            <!-- Ville / Code postal -->
-            <div class="row">
-              <input type="text" placeholder="Ville" required />
-              <input type="text" placeholder="Code postal" required />
-            </div>
-
-            <!-- Bouton envoyer -->
-            <button type="submit">Envoyer</button>
-          </form>
-        </div>
-      </div>
-    </section>
+    <script
+      src="https://js-eu1.hsforms.net/forms/embed/146085103.js"
+      defer
+    ></script>
+    <div
+      class="hs-form-frame"
+      data-region="eu1"
+      data-form-id="ca8550f2-3c51-4b2b-95ea-20895210a25b"
+      data-portal-id="146085103"
+    ></div>
 
     <!-- FOOTER -->
     <hr class="footer-separator" />
@@ -173,7 +97,6 @@
           </div>
         </div>
       </div>
-
       <!-- Mentions légales / CGV -->
       <div class="footer-bottom">
         <p>© 2025 Templier Driver. Tous droits réservés.</p>
