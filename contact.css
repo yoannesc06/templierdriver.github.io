@@ -149,7 +149,10 @@ nav a:hover::after {
   margin-left: 0, 5rem;
   cursor: pointer;
 }
-
+/* FORMULAIRE */
+.hs-form-frame {
+  margin-top: 8rem;
+}
 /* FOOTER */
 .footer-separator {
   border: none;
