@@ -196,7 +196,7 @@ section p {
   padding-left: 55px;
 }
 .hero {
-  background-image: url("images/porshe\ V2.png");
+  background-image: url("images/porshe\ V2.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -448,7 +448,7 @@ section p {
 }
 
 .scroll-line.left p {
-  animation: scroll-left 45s linear infinite;
+  animation: scroll-left 25s linear infinite;
 }
 
 @keyframes scroll-left {
