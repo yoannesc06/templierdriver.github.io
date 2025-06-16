@@ -249,12 +249,11 @@ section p {
   display: flex;
   justify-content: center;
 }
-
 /* TEXTE INTRO */
 .quest-section {
-  margin-top: -20rem;
-  background: #fff;
-  color: #000;
+  margin-top: -27rem;
+  background: #000000;
+  color: #ffffff;
   padding: 120px 5%;
   min-height: 100vh;
   display: flex;
@@ -303,12 +302,13 @@ section p {
 }
 
 .quest-text {
+  margin-top: -2rem;
   display: flex;
   justify-content: center;
   font-family: "Luxurious Script", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-style: normal;
   line-height: 1.8;
   margin-bottom: 35px;
@@ -316,7 +316,9 @@ section p {
   transform: translateX(-50px);
   transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
+.span {
+  color: #ff6b35;
+}
 .quest-text:nth-child(2) {
   transition-delay: 0.6s;
 }
@@ -390,6 +392,7 @@ section p {
 
 /* CONTENT */
 .content {
+  margin-top: -1rem;
   overflow: hidden;
   position: relative;
 }
@@ -433,12 +436,12 @@ section p {
 .scroll-line {
   pointer-events: none;
   margin-top: -23rem;
-  margin-bottom: -15rem;
+  margin-bottom: -1rem;
   white-space: nowrap;
   overflow: hidden;
   font-weight: 900;
   font-family: "Inter", sans-serif;
-  font-size: 8rem;
+  font-size: 9rem;
   width: 100%;
 }
 
