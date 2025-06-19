@@ -13,6 +13,7 @@ const target = document.querySelector(".other h1");
 const addToCartBtn = document.getElementById("add-to-cart");
 const cartIcon = document.getElementById("cart-icon");
 const cartCount = document.getElementById("cart-count");
+
 // MENU BURGER
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav-links");
@@ -21,6 +22,7 @@ burger.addEventListener("click", () => {
   nav.classList.toggle("active");
   burger.classList.toggle("open");
 });
+
 // ANIM DU AJOUTER AU PANIER
 let count = 0;
 
@@ -62,10 +64,10 @@ observer.observe(target);
 // liste des produits
 const products = {
   1: {
-    name: "T-SHIRT TEMPLIER DRIVER",
+    name: "T-SHIRT BLANC ''LE VRAI BARTHES''",
     price: "30.00 €",
-    frontImage: "images/Shop/T1B.png",
-    backImage: "images/Shop/T1F.png",
+    frontImage: "images/Shop/T-shirt blanc face.png",
+    backImage: "images/Shop/T-shirt blanc dos.png",
     color: "navy",
   },
   2: {
@@ -76,17 +78,46 @@ const products = {
     color: "black",
   },
   3: {
-    name: "MUG TEMPLIER DRIVER",
+    name: "MUG BLANC ''LE BREVAGE DES TEMPLIERS''",
     price: "15.00 €",
-    frontImage: "images/Shop/mug1.png",
-    backImage: "images/Shop/mug2.png",
+    frontImage: "images/Shop/Mug bouclier blanc face.png",
+    backImage: "images/Shop/Mug bouclier blanc dos.png",
     color: "navajowhite",
+  },
+  4: {
+    name: "CASQUETTE NOIRE ''CASQUE N°27''",
+    price: "30.00 €",
+    frontImage: "images/Shop/Casquette 27 noir (templier driver).png",
+    backImage: "images/Shop/Casquette 27 noir (templier driver).png",
+    color: "black",
+  },
+  5: {
+    name: "CASQUETTE NOIRE ''HEAUME SWEET HOME''",
+    price: "30.00 €",
+    frontImage: "images/Shop/Casquette bouclier noir (templier driver).png",
+    backImage: "images/Shop/Casquette bouclier noir (templier driver).png",
+    color: "black",
+  },
+  6: {
+    name: "CASQUETTE NOIRE ''LE CASQUE QUI BARDE''",
+    price: "30.00 €",
+    frontImage: "images/Shop/Casquette noir.png",
+    backImage: "images/Shop/Casquette noir.png",
+    color: "black",
   },
 };
 
 // verifie si ID existe
 if (products[productId]) {
   const product = products[productId];
+
+  // Cacher la taille si le produit est le mug (id 3)
+  if (productId === "3") {
+    const sizeSelect = document.getElementById("size");
+    if (sizeSelect) {
+      sizeSelect.style.display = "none";
+    }
+  }
 
   document.getElementById("product-name").textContent = product.name;
   document.getElementById("product-price").textContent = product.price;
@@ -116,7 +147,8 @@ if (products[productId]) {
   // ajouter au panier
   const addToCartBtn = document.getElementById("add-to-cart");
   addToCartBtn.addEventListener("click", () => {
-    const size = document.getElementById("size").value;
+    const size =
+      productId === "3" ? null : document.getElementById("size").value;
 
     const cartProduct = {
       name: product.name,
