@@ -65,14 +65,14 @@ observer.observe(target);
 const products = {
   1: {
     name: "T-SHIRT BLANC ''LE VRAI BARTHES''",
-    price: "30.00 €",
+    price: "39.00 €",
     frontImage: "images/Shop/T-shirt blanc face.png",
     backImage: "images/Shop/T-shirt blanc dos.png",
-    color: "navy",
+    color: "rgb(211, 211, 211)",
   },
   2: {
     name: "T-SHIRT TEMPLIER DRIVER (NOIR)",
-    price: "30.00 €",
+    price: "39.00 €",
     frontImage: "images/Shop/T2B.png",
     backImage: "images/Shop/T2F.png",
     color: "black",
@@ -82,7 +82,7 @@ const products = {
     price: "15.00 €",
     frontImage: "images/Shop/Mug bouclier blanc face.png",
     backImage: "images/Shop/Mug bouclier blanc dos.png",
-    color: "navajowhite",
+    color: "rgb(192, 192, 192)",
   },
   4: {
     name: "CASQUETTE NOIRE ''CASQUE N°27''",
